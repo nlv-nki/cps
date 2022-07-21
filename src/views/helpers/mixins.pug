@@ -1,0 +1,23 @@
+// - Define our sizes
+- var desktop = "1020px"
+- var tablet = "720px"
+- var mobile = "320px"
+
+// - Define the source mixin
+mixin source(media, source)
+	source(media="(min-width: #{media})" srcset="#{source}")
+	// - 'source' needs both the image source and either resolution or width, e.g. 1x for normal resolution, 2x for retina, OR 720w, 1420w, etc. Can list multiple sources.
+
+// - Define the Picture mixin
+mixin picture(fallback, alt)
+	picture
+		mixin source(media, source)
+		block
+		img(src="#{fallback}", alt="#{alt}")
+
+// - Call the mixin
+// - +picture('https://s10.postimg.org/5xfusa16h/saffy_med_1x.jpg', 'Saffy the Cat')
+// - 	// - sources need to be in this order (largest to smallest)
+// - 	+source(desktop, 'https://s22.postimg.org/nlmdblby9/saffy_xl_1x.jpg')
+// - 	+source(tablet, 'https://s10.postimg.org/5xfusa16h/saffy_med_1x.jpg 720w, https://s10.postimg.org/fw0teram1/saffy_large_2x.jpg 1420w')
+// - 	+source(mobile, 'https://s10.postimg.org/za1neg22h/saffy_cropped_s.jpg 320w, https://s10.postimg.org/7b7hnl0ft/saffy_cropped_l.jpg 640w')

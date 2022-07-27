@@ -561,6 +561,14 @@ li {
   margin-right: 16px;
 }
 
+.header-menu__service-name {
+  display: none;
+}
+
+.header-menu__user-list {
+  display: none;
+}
+
 .burger {
   margin: 0 16px;
 }
@@ -657,5 +665,34 @@ li {
 .content {
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .header-menu__user-list {
+    display: flex;
+  }
+
+  .logo {
+    margin-right: 250px;
+  }
+
+  .logo::after {
+    right: 125px;
+  }
+
+  .content {
+    flex-direction: row;
+  }
+
+  .content__description {
+    max-width: 312px;
+    margin-right: 48px;
+  }
+}
+
+@media (min-width: 1120) {
+  .header-menu__service-name {
+    display: inline;
+  }
 }
 /*# sourceMappingURL=maps/main.css.map */

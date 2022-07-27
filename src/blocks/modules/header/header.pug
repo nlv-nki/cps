@@ -13,7 +13,11 @@ header.header.container
 		svg
 			use(xlink:href="img/sprites/sprite.svg#profile")
 	.header-menu__services
-		svg
-			use(xlink:href="img/sprites/sprite.svg#repair")
-		svg
-			use(xlink:href="img/sprites/sprite.svg#checkstatus")
+		.header-menu__services-item
+			span.header-menu__service-name Оставить заявку
+			svg
+				use(xlink:href="img/sprites/sprite.svg#repair")
+		.header-menu__service-item
+			span.header-menu__service-name Статус ремонта
+			svg
+				use(xlink:href="img/sprites/sprite.svg#checkstatus")

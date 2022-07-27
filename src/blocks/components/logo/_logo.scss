@@ -1,6 +1,9 @@
 .logo {
 	padding-right: 16px;
 	position: relative;
+	@media (min-width: 768px) {
+		margin-right: 250px;
+	}
 	&::after {
 		display: block;
 		content: " ";
@@ -10,10 +13,14 @@
 		position: absolute;
 		right: 0;
 		top: 12px;
+		@media (min-width: 768px) {
+			right: 125px;
+		}
 	}
 	svg {
 		height: 50px;
 		width: 97px;
 	}
+
 }
 

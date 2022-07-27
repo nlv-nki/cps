@@ -1,5 +1,11 @@
 .content {
 	display: flex;
 	flex-direction: column;
-
+	@media (min-width:768px) {
+		flex-direction: row;
+		&__description {
+			max-width: 312px;
+			margin-right: 48px;
+		}
+	}
 }

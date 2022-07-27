@@ -9,6 +9,18 @@
 		}
 	}
 
+	&__service-name {
+		display:none;
+		@media (min-width:1120) {
+			display:inline;
+		}
+	}
 
+	&__user-list {
+		display:none;
+		@media (min-width: 768px) {
+			display:flex;
+		}
+	}
 
 }

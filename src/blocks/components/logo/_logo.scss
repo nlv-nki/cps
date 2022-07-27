@@ -1,0 +1,19 @@
+.logo {
+	padding-right: 16px;
+	position: relative;
+	&::after {
+		display: block;
+		content: " ";
+		width: 2px;
+		height: 32px;
+		background-color: #EAEAEA;
+		position: absolute;
+		right: 0;
+		top: 12px;
+	}
+	svg {
+		height: 50px;
+		width: 97px;
+	}
+}
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>cps - kata eductation maket</title>
+    <meta name="theme-color" content="#fff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
+    <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="stylesheet" href="styles/main.css">
+  </head>
+  <body>
+    <header class="header container">
+      <div class="burger">
+        <svg class="burger__icon">
+          <use xlink:href="img/sprites/sprite.svg#burger"></use>
+        </svg>
+      </div>
+      <div class="logo">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#logo"></use>
+        </svg>
+      </div>
+      <div class="header-menu__user-list">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#call"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#chat"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#profile"></use>
+        </svg>
+      </div>
+      <div class="header-menu__services">
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#repair"></use>
+        </svg>
+        <svg>
+          <use xlink:href="img/sprites/sprite.svg#checkstatus"></use>
+        </svg>
+      </div>
+    </header>
+    <main>
+      <section class="services container">
+        <h1 class="services__title">Услуги и сервисы</h1>
+        <nav class="sub-menu">
+          <ul class="sub-menu__list">
+            <li class="sub-menu__item sub-menu__item--active"><a class="sub-menu__link">Ремонтируемые бренды</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link">Дополнительные услуги</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link">Цены на услуги</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link">Адреса сервисных центров</a></li>
+            <li class="sub-menu__item"><a class="sub-menu__link">Специальные цены</a></li>
+          </ul>
+        </nav>
+        <div class="content">
+          <div class="content__description">
+            <p class="text">
+              Мы являемся авторизованным сервисным центром по ремонту техники Dell.
+              Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+            </p>
+            <p class="text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p><a class="link-more" href="#">Читать далее</a>
+          </div>
+          <div class="content__images">
+            <picture>
+              <source media="(min-width: 767px)" srcset="../img/mg_3223-tablet@1x.png 1x, ../img/mg_3223-tablet@2x.png 2x">
+              <source media="(min-width: 1250px)" srcset="../img/mg_3223-desktop@1x.png 1x, ../img/mg_3223-desktop@2x.png 2x">
+              <source type="image/webp" media="(min-width: 767px)" srcset="../img/mg_3223-tablet@1x.webp 1x, ../img/mg_3223-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 1250px)" srcset="../img/mg_3223-desktop@1x.webp 1x, ../img/mg_3223-desktop@1x.webp 2x"><img src="../img/mg_3223-mobile@1x.png" srcset="../img/mg_3223-mobile@2x.png 2x">
+            </picture>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

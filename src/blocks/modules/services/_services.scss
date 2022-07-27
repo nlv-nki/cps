@@ -1,0 +1,26 @@
+.services {
+
+	&__title {
+		position: relative;
+		padding-left: 16px;
+		margin-bottom: 24px;
+		font-size: 28px;
+		line-height: 40px;
+		letter-spacing: -0.6px;
+		font-family: 'TT Lakes Bold';
+	}
+	&__title::before {
+		content: " ";
+		display:block;
+		width: 7px;
+		height: 40px;
+		position: absolute;
+		background-image: url('../img/svg/highlight.svg');
+		background-size: 7px 40px;
+		left: 0;
+	}
+	padding-top:24px;
+	background: #F8F8F8;
+	min-height:100vh;
+}
+

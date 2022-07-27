@@ -15,7 +15,8 @@ const argv = yargs.argv,
 
 gulp.task("webp", () => {
     return gulp.src(paths.images.src)
-        .pipe(newer(paths.images.dist))
+        //.pipe(newer(paths.images.dist))
+		.pipe(newer(paths.images.dist+'/*.{jpeg,png}'))
         .pipe(webp(gulpif(production, imageminWebp({
             lossless: true,
             quality: 100,

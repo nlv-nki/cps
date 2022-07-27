@@ -1,0 +1,35 @@
+.sub-menu {
+	padding:0 16px;
+	margin-bottom: 32px;
+
+	&__list {
+		overflow-x: scroll;
+		display:flex;
+		padding-bottom: 10px;
+	}
+
+	&__item {
+		white-space: nowrap;
+
+		padding:8px 12px
+
+	}
+
+	&__item--active {
+		border: 2px solid #B8FFEC;
+		border-radius: 6px;
+		background: #FFFFFF;
+	}
+
+	&__link {
+		font-size: 16px;
+		line-height: 24px;
+		letter-spacing: -0.2px;
+		font-family: 'TT Lakes Regular';
+		color: #7E7E82;
+
+	}
+
+
+
+}

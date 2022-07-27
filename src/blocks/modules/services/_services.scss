@@ -1,13 +1,18 @@
 .services {
 
 	&__title {
-		position: relative;
+		position: absolute;
 		padding-left: 16px;
 		margin-bottom: 24px;
 		font-size: 28px;
 		line-height: 40px;
 		letter-spacing: -0.6px;
 		font-family: 'TT Lakes Bold';
+		top: 110px;
+		z-index: 2;
+		@media (min-width:1120px) {
+			top: 17px;
+		}
 	}
 	&__title::before {
 		content: " ";
@@ -19,8 +24,29 @@
 		background-size: 7px 40px;
 		left: 0;
 	}
-	padding-top:24px;
+
+
+	&__sub-title {
+		display:none;
+		font-size: 16px;
+		line-height: 24px;
+		font-family: 'TT Lakes Regular';
+		letter-spacing: -0.2px;
+		color: #7E7E82;
+		margin-left: 56px;
+		margin-bottom: 20px;
+
+		@media (min-width:1120px) {
+		display: block;
+		}
+	}
+
+
+	padding-top:84px;
 	background: #F8F8F8;
 	min-height:100vh;
+	@media (min-width:1120px) {
+		padding-top:0;
+	}
 }
 

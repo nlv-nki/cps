@@ -1,6 +1,9 @@
 .sub-menu {
 	padding:0 16px;
 	margin-bottom: 32px;
+	@media (min-width:1120px) {
+		margin-bottom:0;
+	}
 
 	&__list {
 		overflow-x: scroll;

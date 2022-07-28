@@ -453,8 +453,8 @@ ul {
 
 .container {
   position: relative;
-  margin: 0 auto;
   width: 100%;
+  max-width: 1120px;
   min-width: 320px;
 }
 
@@ -581,10 +581,27 @@ li {
 
 .header-menu__service-name {
   display: none;
+  font-family: "TT Lakes Medium";
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  font-size: 16px;
+  line-height: 24px;
 }
 
 .header-menu__user-list {
   display: none;
+  position: relative;
+}
+
+.header-menu__user-list::after {
+  display: block;
+  content: " ";
+  width: 2px;
+  height: 32px;
+  background-color: #EAEAEA;
+  position: absolute;
+  right: 0;
+  top: 5px;
 }
 
 .burger {
@@ -619,13 +636,20 @@ li {
 
 .sub-menu {
   padding: 0 16px;
-  margin-bottom: 32px;
 }
 
 .sub-menu__list {
+  max-width: 980px;
   overflow-x: scroll;
   display: flex;
   padding-bottom: 10px;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.sub-menu__list::-webkit-scrollbar {
+  width: 0;
+  height: 0;
 }
 
 .sub-menu__item {
@@ -699,6 +723,7 @@ li {
   }
 
   .content__description {
+    padding-top: 12px;
     max-width: 312px;
     margin-right: 48px;
   }
@@ -739,8 +764,8 @@ li {
     display: none;
   }
 
-  .sub-menu {
-    margin-bottom: 0;
+  .sub-menu__list {
+    flex-wrap: wrap;
   }
 
   .content__description {

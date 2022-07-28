@@ -4,6 +4,7 @@
 	@media (min-width:768px) {
 		flex-direction: row;
 		&__description {
+			padding-top: 12px;
 			max-width: 312px;
 			margin-right: 48px;
 		}

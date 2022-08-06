@@ -433,7 +433,7 @@ body {
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  color: #282A33;
+  color: #1B1C21;
 }
 
 .content-box-component {
@@ -485,7 +485,7 @@ svg {
   flex: 0 0 auto;
   width: 100%;
   height: 100%;
-  fill: currentColor;
+  /*fill: currentColor; */
 }
 
 figure,
@@ -611,6 +611,108 @@ li {
 .burger__icon {
   width: 40px;
   height: 40px;
+}
+
+.main-menu {
+  max-width: 320px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  height: 100vh;
+  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.main-menu__header {
+  display: flex;
+  padding: 18px 23px 45px;
+  align-items: center;
+}
+
+.main-menu__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.main-menu__item {
+  margin-bottom: 32px;
+  padding-left: 24px;
+  position: relative;
+}
+
+.main-menu__item--active::before {
+  content: " ";
+  display: block;
+  width: 4px;
+  height: 32px;
+  position: absolute;
+  background-image: url("../img/svg/highlight.svg");
+  background-size: 4px 32px;
+  left: 0;
+  bottom: -5px;
+}
+
+.main-menu__link {
+  font-family: "TT Lakes Regular";
+  letter-spacing: -0.2px;
+  color: #1B1C21;
+  font-size: 16px;
+}
+
+.main-menu__btn-close {
+  margin-right: 18px;
+}
+
+.main-menu__logo {
+  height: 50px;
+  width: 97px;
+  margin-right: 80px;
+}
+
+.main-menu__btn-search {
+  width: 40px;
+  height: 40px;
+}
+
+.main-menu__user-list {
+  display: flex;
+  padding-bottom: 16px;
+}
+
+.main-menu__user-list svg {
+  margin-right: 16px;
+  width: 40px;
+  height: 40px;
+}
+
+.main-menu__mailto {
+  font-family: "TT Lakes Medium";
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.2px;
+  padding-bottom: 12px;
+}
+
+.main-menu__call {
+  font-family: "TT Lakes Bold";
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: -0.6px;
+  padding-bottom: 40px;
+}
+
+.main-menu__lan {
+  padding-bottom: 32px;
+}
+
+.main-menu__footer {
+  padding-left: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.main-menu__footer .main-menu__link {
+  margin-right: 7px;
 }
 
 .logo {

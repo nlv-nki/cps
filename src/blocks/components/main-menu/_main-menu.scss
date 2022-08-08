@@ -2,12 +2,24 @@
 	max-width: 320px;
 	display:flex;
 	flex-direction: column;
-	flex-grow:1;
 	height: 100vh;
 
 	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 	//transform: matrix(-1, 0, 0, 1, 0, 0);
 
+
+	&__user-list,
+	&__btn-close,
+	&__btn-search {
+		svg {
+			opacity: 0.7;
+			cursor: pointer;
+			transition: opacity 0.3s;
+		}
+		svg:hover {
+			opacity: 1;
+		}
+	}
 
 	&__header {
 		display:flex;
@@ -16,7 +28,7 @@
 	}
 
 	&__body {
-		// padding-bottom: 268px;
+		flex-grow:1;
 	}
 
 	&__list {
@@ -58,6 +70,7 @@
 		height: 50px;
 		width: 97px;
 		margin-right: 80px;
+
 	}
 
 	&__btn-search {
@@ -73,8 +86,11 @@
 			margin-right: 16px;
 			width: 40px;
 			height: 40px;
+			opacity: 0.7;
+
 		}
 	}
+
 
 
 	&__mailto {

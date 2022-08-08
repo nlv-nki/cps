@@ -1,8 +1,13 @@
 .services {
 
+
+	padding-top:84px;
+	background: #F8F8F8;
+	// min-height:100vh;
+
 	&__title {
 		position: absolute;
-		padding-left: 16px;
+		padding-left: 32px;
 		margin-bottom: 24px;
 		font-size: 28px;
 		line-height: 40px;
@@ -41,10 +46,6 @@
 		}
 	}
 
-
-	padding-top:84px;
-	background: #F8F8F8;
-	min-height:100vh;
 	@media (min-width:1120px) {
 		padding-top:0;
 	}

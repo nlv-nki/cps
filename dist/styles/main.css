@@ -617,15 +617,32 @@ li {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
   height: 100vh;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+}
+
+.main-menu__user-list svg,
+.main-menu__btn-close svg,
+.main-menu__btn-search svg {
+  opacity: 0.7;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.main-menu__user-list svg:hover,
+.main-menu__btn-close svg:hover,
+.main-menu__btn-search svg:hover {
+  opacity: 1;
 }
 
 .main-menu__header {
   display: flex;
   padding: 18px 23px 45px;
   align-items: center;
+}
+
+.main-menu__body {
+  flex-grow: 1;
 }
 
 .main-menu__list {
@@ -682,6 +699,7 @@ li {
   margin-right: 16px;
   width: 40px;
   height: 40px;
+  opacity: 0.7;
 }
 
 .main-menu__mailto {

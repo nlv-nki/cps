@@ -618,7 +618,6 @@ li {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
 }
 
 .main-menu__user-list svg,
@@ -830,6 +829,10 @@ li {
 }
 
 @media (min-width: 768px) {
+  .main-menu {
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+  }
+
   .logo {
     margin-right: 250px;
   }

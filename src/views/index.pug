@@ -3,14 +3,17 @@ include helpers/mixins
 
 block variables
 	- const title = "cps - kata eductation maket"
+	- const baseDir = './'
+	- const description = 'ddd'
 
 block content
+	div.icon-burger-after
+	//-+icon("burger")
 	include ../blocks/modules/header/header
 	main
 		include ../blocks/modules/services/services
 		include ../blocks/modules/brands/brands
 	include ../blocks/modules/footer/footer
-
 block scripts
 	script(src="js/vendor.js")
 	script(src="js/main.js")

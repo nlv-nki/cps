@@ -1581,8 +1581,8 @@ li {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  min-height: 700px;
+  height: 725px;
+  min-height: 100vh;
 }
 
 .main-menu__user-list svg,

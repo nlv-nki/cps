@@ -17,26 +17,26 @@ const catalog_shower = () => {
 
 brands__btn.addEventListener('click', catalog_shower);
 
-(function() {
-	var throttle = function(type, name, obj) {
-	  obj = obj || window;
-	  var running = false;
-	  var func = function() {
-		if (running) {
-		  return;
-		}
-		running = true;
-		requestAnimationFrame(function() {
-		  obj.dispatchEvent(new CustomEvent(name));
-		  running = false;
-		});
-	  };
-	  obj.addEventListener(type, func);
+(function () {
+	var throttle = function (type, name, obj) {
+		obj = obj || window;
+		var running = false;
+		var func = function () {
+			if (running) {
+				return;
+			}
+			running = true;
+			requestAnimationFrame(function () {
+				obj.dispatchEvent(new CustomEvent(name));
+				running = false;
+			});
+		};
+		obj.addEventListener(type, func);
 	};
 
 	/* init - you can init any event */
 	throttle("resize", "optimizedResize");
-  })();
+})();
 
 
 
@@ -46,17 +46,17 @@ let swiper;
 
 
 const enableSwiper = function () {
-		 swiper = new Swiper(".brands__swiper", {
+	swiper = new Swiper(".brands__swiper", {
 		slidesPerView: 1,
 		slidesPerView: "auto",
 		spaceBetween: 15,
-		autoplay:true,
+		autoplay: true,
 		pagination: {
-		  el: ".swiper-pagination",
-		  clickable: true,
+			el: ".swiper-pagination",
+			clickable: true,
 
 		},
-	  });
+	});
 
 	console.log('onn 1');
 
@@ -68,21 +68,19 @@ const enableSwiper = function () {
 
 
 
-const breakpointChecker = function() {
+const breakpointChecker = function () {
 	console.log(breakpoint.matches);
-	if(breakpoint.matches === true) {
-		if ( swiper !== undefined ) swiper.destroy( true, true );
-		console.log('offf ');
+	if (breakpoint.matches === true) {
+		if (swiper !== undefined) swiper.destroy(true, true);
 		return;
-	}
-	else if ( breakpoint.matches === false ) {      // fire small viewport version of swiper
+	} else if (breakpoint.matches === false) { // fire small viewport version of swiper
 		console.log('onn ');
 
-		 enableSwiper();
-	  }
+		enableSwiper();
+	}
 }
 
 breakpointChecker();
 window.addEventListener('optimizedResize', () => {
 	breakpointChecker();
-  });
+});

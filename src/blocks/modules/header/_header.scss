@@ -1,11 +1,12 @@
 .header {
-	height:88px;
+	height: 88px;
 	background: #FFF;
-	display:flex;
-	padding:10px 0 0;
+	display: flex;
+	padding: 10px 0 0;
 	justify-content: space-between;
 	align-items: center;
-	@media (min-width:1120px) {
-		background:#F8F8F8;
+
+	@media (min-width: 1120px) {
+		background: #F8F8F8;
 	}
 }

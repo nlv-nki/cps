@@ -1,12 +1,15 @@
 {
-    "extends": "stylelint-config-standard-scss",
+    ; "extends": "stylelint-config-standard-scss",
+	  "extends": ["stylelint-prettier/recommended", "stylelint-config-prettier"],
     "customSyntax": "postcss-scss",
     "plugins": [
         "stylelint-order",
-        "stylelint-selector-bem-pattern"
+        "stylelint-selector-bem-pattern",
+		"stylelint-prettier"
     ],
     "rules": {
-        "indentation": 4,
+        "indentation": tab,
+		"prettier/prettier": true,
         "plugin/selector-bem-pattern": [
             {
                 "implicitComponents": true,

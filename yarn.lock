@@ -7830,9 +7830,11 @@ bem-tools-create@bem-tools/bem-tools-create:
     sass: ^1.49.9
     stylelint: ^14.5.3
     stylelint-config-prettier: ^9.0.3
+    stylelint-config-recommended-scss: ^7.0.0
     stylelint-config-standard-scss: ^3.0.0
     stylelint-order: ^5.0.0
     stylelint-prettier: ^2.0.0
+    stylelint-scss: ^4.3.0
     stylelint-selector-bem-pattern: ^2.1.1
     svgo: ^2.8.0
     swiper: ^8.3.2
@@ -14431,12 +14433,34 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
+"stylelint-config-recommended-scss@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "stylelint-config-recommended-scss@npm:7.0.0"
+  dependencies:
+    postcss-scss: ^4.0.2
+    stylelint-config-recommended: ^8.0.0
+    stylelint-scss: ^4.0.0
+  peerDependencies:
+    stylelint: ^14.4.0
+  checksum: 978d3298a1b4d7d0fcc258298c688f4748373092f097733a0bcf24d60ced47b46d9b03c79fe73b88f981219efca8ce27756e870e3e7a2abcac838952b088a8df
+  languageName: node
+  linkType: hard
+
 "stylelint-config-recommended@npm:^6.0.0":
   version: 6.0.0
   resolution: "stylelint-config-recommended@npm:6.0.0"
   peerDependencies:
     stylelint: ^14.0.0
   checksum: 103b3c122253a908f91f5728d39eff6fed3866157e29a6e550da051cfc207b0d159b7434e0806126e3c3939e6528a0a1cd5a1cf00b835dd49b3a18ba4a007fa1
+  languageName: node
+  linkType: hard
+
+"stylelint-config-recommended@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "stylelint-config-recommended@npm:8.0.0"
+  peerDependencies:
+    stylelint: ^14.8.0
+  checksum: 0c5ca94625e5308a7afb8315bb350a2b48f46fdd8d8922dd9a8c2e37b3407f2294794d930726ad6bf2007abcde1abd34084808cf83adf150efe3a643e0eb5ac4
   languageName: node
   linkType: hard
 
@@ -14487,7 +14511,7 @@ bem-tools-create@bem-tools/bem-tools-create:
   languageName: node
   linkType: hard
 
-"stylelint-scss@npm:^4.0.0":
+"stylelint-scss@npm:^4.0.0, stylelint-scss@npm:^4.3.0":
   version: 4.3.0
   resolution: "stylelint-scss@npm:4.3.0"
   dependencies:

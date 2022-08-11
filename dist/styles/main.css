@@ -1547,7 +1547,7 @@ li {
   display: none;
   font-family: "TT Lakes Medium";
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: #1b1c21;
   font-size: 16px;
   line-height: 24px;
 }
@@ -1562,7 +1562,7 @@ li {
   content: " ";
   width: 2px;
   height: 32px;
-  background-color: #EAEAEA;
+  background-color: #eaeaea;
   position: absolute;
   right: 0;
   top: 5px;

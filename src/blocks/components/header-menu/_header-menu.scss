@@ -1,51 +1,49 @@
 .header-menu {
 	&__user-list,
 	&__services {
-		display:flex;
+		display: flex;
 		svg {
 			width: 40px;
 			height: 40px;
-			margin-right:16px;
+			margin-right: 16px;
 		}
-		@media (min-width:1120px) {
+		@media (min-width: 1120px) {
 			margin-left: auto;
 		}
 	}
 	&__service-item {
-		display:flex;
+		display: flex;
 		align-items: center;
 	}
 	&__service-name {
-		display:none;
+		display: none;
 		font-family: 'TT Lakes Medium';
 		letter-spacing: -0.2px;
-		color: #1B1C21;
+		color: #1b1c21;
 		font-size: 16px;
 		line-height: 24px;
-		@media (min-width:1120px) {
-			display:inline;
+		@media (min-width: 1120px) {
+			display: inline;
 			margin-right: 10px;
 		}
 	}
 
 	&__user-list {
-		display:none;
+		display: none;
 		position: relative;
 		@media (min-width: 768px) and (max-width: 1100px) {
-			display:flex;
+			display: flex;
 		}
 	}
 
 	&__user-list::after {
 		display: block;
-		content: " ";
+		content: ' ';
 		width: 2px;
 		height: 32px;
-		background-color: #EAEAEA;
+		background-color: #eaeaea;
 		position: absolute;
 		right: 0;
 		top: 5px;
 	}
-
-
 }

@@ -21,12 +21,14 @@
 		"build:gzip": "gulp gzip --production",
 		"lint:styles": "stylelint \"src/**/*.scss\"",
 		"lint:styles --fix": "stylelint --fix \"src/**/*.scss\"",
-		"lint:styles --fix --prettier": "prettier-stylelint --write 'src/**/*.{css,scss}'",
+		"fix-stylesPrettier": "prettier-stylelint --write 'src/**/*.{css,scss}'",
 		"lint:scripts": "eslint \"src/js/**/*.js\"",
 		"lint:scripts --fix": "eslint --fix \"src/js/**/*.js\"",
 		"lint-check": "stylelint-config-prettier-check",
 		"bem-c": "bem create $* -l src/blocks/components",
-		"bem-m": "bem create $* -l src/blocks/modules"
+		"bem-m": "bem create $* -l src/blocks/modules",
+		"prettier:check": "prettier --list-different 'src/**/*.scss' 'src/js/**/*.{js,jsx,ts,tsx}'",
+		"prettier:fix": "prettier --write 'src/**/*.scss' 'src/js/**/*.{js,jsx,ts,tsx}'"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.17.5",

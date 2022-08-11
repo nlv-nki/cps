@@ -130,7 +130,7 @@
                 ],
             }
         ]],
-        "color-hex-case": ["lower", {
+		       "color-hex-case": ["lower", {
             "severity": "warning",
             "message": "HEX-цвета нужно указывать строчными буквами"
         }],

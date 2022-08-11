@@ -1405,7 +1405,7 @@ li {
 
 .header {
   height: 88px;
-  background: #FFF;
+  background: #fff;
   display: flex;
   padding: 10px 0 0;
   justify-content: space-between;
@@ -1414,39 +1414,39 @@ li {
 
 .services {
   padding-top: 84px;
-  background: #F8F8F8;
+  background: #f8f8f8;
 }
 
 .services__title {
   position: absolute;
+  z-index: 2;
+  top: 110px;
   padding-left: 32px;
   margin-bottom: 24px;
   font-size: 28px;
   line-height: 40px;
   letter-spacing: -0.6px;
-  font-family: "TT Lakes Bold";
-  top: 110px;
-  z-index: 2;
+  font-family: "TT Lakes Regular", "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .services__title::before {
   content: " ";
   display: block;
+  position: absolute;
+  left: 0;
   width: 7px;
   height: 40px;
-  position: absolute;
   background-image: url("../img/svg/highlight.svg");
   background-size: 7px 40px;
-  left: 0;
 }
 
 .services__sub-title {
   display: none;
   font-size: 16px;
   line-height: 24px;
-  font-family: "TT Lakes Regular";
+  font-family: "TT Lakes Regular", "Open Sans", "Helvetica Neue", sans-serif;
   letter-spacing: -0.2px;
-  color: #7E7E82;
+  color: #7e7e82;
   margin-left: 56px;
   margin-bottom: 20px;
 }
@@ -1705,19 +1705,19 @@ li {
 }
 
 .logo::after {
-  display: block;
   content: " ";
+  display: block;
+  position: absolute;
+  top: 12px;
+  right: 0;
   width: 2px;
   height: 32px;
-  background-color: #EAEAEA;
-  position: absolute;
-  right: 0;
-  top: 12px;
+  background-color: #eaeaea;
 }
 
 .logo svg {
-  height: 50px;
   width: 97px;
+  height: 50px;
 }
 
 .sub-menu {
@@ -1758,11 +1758,11 @@ li {
 }
 
 .text {
-  font-family: "TT Lakes Regular";
+  font-family: "TT Lakes Regular", sans-serif;
   font-size: 14px;
   line-height: 18px;
   letter-spacing: 0.2px;
-  color: #1B1C21;
+  color: #1b1c21;
   padding: 0 16px;
   margin-bottom: 16px;
 }
@@ -1821,7 +1821,7 @@ li {
   }
 
   .main-menu {
-    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    box-shadow: -2px 0px 4px rgba 69, 79, 126, 0.02, 16px 0px 52px rgba 14, 24, 80, 0.2;
   }
 
   .logo {
@@ -1845,7 +1845,11 @@ li {
 
 @media (min-width: 1120px) {
   .header {
-    background: #F8F8F8;
+    background: #f8f8f8;
+  }
+
+  .services {
+    padding-top: 0;
   }
 
   .services__title {
@@ -1854,10 +1858,6 @@ li {
 
   .services__sub-title {
     display: block;
-  }
-
-  .services {
-    padding-top: 0;
   }
 
   .brands__item {

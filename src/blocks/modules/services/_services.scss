@@ -1,53 +1,50 @@
 .services {
+	padding-top: 84px;
+	background: #f8f8f8;
 
-
-	padding-top:84px;
-	background: #F8F8F8;
-	// min-height:100vh;
+	@media (min-width: 1120px) {
+		padding-top: 0;
+	}
 
 	&__title {
 		position: absolute;
+		z-index: 2;
+		top: 110px;
 		padding-left: 32px;
 		margin-bottom: 24px;
 		font-size: 28px;
 		line-height: 40px;
 		letter-spacing: -0.6px;
-		font-family: 'TT Lakes Bold';
-		top: 110px;
-		z-index: 2;
-		@media (min-width:1120px) {
+		font-family: $font-primary;
+
+		@media (min-width: 1120px) {
 			top: 17px;
 		}
 	}
+
 	&__title::before {
 		content: " ";
-		display:block;
+		display: block;
+		position: absolute;
+		left: 0;
 		width: 7px;
 		height: 40px;
-		position: absolute;
-		background-image: url('../img/svg/highlight.svg');
+		background-image: url("../img/svg/highlight.svg");
 		background-size: 7px 40px;
-		left: 0;
 	}
 
-
 	&__sub-title {
-		display:none;
+		display: none;
 		font-size: 16px;
 		line-height: 24px;
-		font-family: 'TT Lakes Regular';
+		font-family: $font-primary;
 		letter-spacing: -0.2px;
-		color: #7E7E82;
+		color: #7e7e82;
 		margin-left: 56px;
 		margin-bottom: 20px;
 
-		@media (min-width:1120px) {
-		display: block;
+		@media (min-width: 1120px) {
+			display: block;
 		}
 	}
-
-	@media (min-width:1120px) {
-		padding-top:0;
-	}
 }
-

@@ -11,14 +11,14 @@
 	}
 
 	&::after {
-		display: block;
 		content: " ";
+		display: block;
+		position: absolute;
+		top: 12px;
+		right: 0;
 		width: 2px;
 		height: 32px;
-		background-color: #EAEAEA;
-		position: absolute;
-		right: 0;
-		top: 12px;
+		background-color: #eaeaea;
 
 		@media (min-width: 768px) {
 			right: 125px;
@@ -26,7 +26,7 @@
 	}
 
 	svg {
-		height: 50px;
 		width: 97px;
+		height: 50px;
 	}
 }

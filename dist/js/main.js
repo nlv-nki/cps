@@ -75,7 +75,6 @@ var breakpointChecker = function breakpointChecker() {
 
   if (breakpoint.matches === true) {
     if (swiper !== undefined) swiper.destroy(true, true);
-    console.log('offf ');
     return;
   } else if (breakpoint.matches === false) {
     // fire small viewport version of swiper

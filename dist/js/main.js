@@ -13,22 +13,22 @@ __webpack_require__.r(__webpack_exports__);
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
-var brands_container = document.querySelector('.brands__wrapper');
-var brands__btn = document.querySelector('.brands__btn');
+var brands_container = document.querySelector(".brands__wrapper");
+var brands__btn = document.querySelector(".brands__btn");
 
 var catalog_shower = function catalog_shower() {
-  if (!brands_container.classList.contains('brands__wrapper--expanded')) {
-    brands_container.classList.add('brands__wrapper--expanded');
-    brands__btn.innerText = 'Свернуть';
-    brands__btn.classList.add('brands__btn--expanded');
+  if (!brands_container.classList.contains("brands__wrapper--expanded")) {
+    brands_container.classList.add("brands__wrapper--expanded");
+    brands__btn.innerText = "Свернуть";
+    brands__btn.classList.add("brands__btn--expanded");
   } else {
-    brands_container.classList.remove('brands__wrapper--expanded');
-    brands__btn.classList.remove('brands__btn--expanded');
-    brands__btn.innerText = 'Показать все';
+    brands_container.classList.remove("brands__wrapper--expanded");
+    brands__btn.classList.remove("brands__btn--expanded");
+    brands__btn.innerText = "Показать все";
   }
 };
 
-brands__btn.addEventListener('click', catalog_shower);
+brands__btn.addEventListener("click", catalog_shower);
 
 (function () {
   var throttle = function throttle(type, name, obj) {
@@ -67,7 +67,7 @@ var enableSwiper = function enableSwiper() {
     el: ".swiper-pagination",
     clickable: true
   }), _Swiper));
-  console.log('onn 1');
+  console.log("onn 1");
 };
 
 var breakpointChecker = function breakpointChecker() {
@@ -78,13 +78,13 @@ var breakpointChecker = function breakpointChecker() {
     return;
   } else if (breakpoint.matches === false) {
     // fire small viewport version of swiper
-    console.log('onn ');
+    console.log("onn ");
     enableSwiper();
   }
 };
 
 breakpointChecker();
-window.addEventListener('optimizedResize', function () {
+window.addEventListener("optimizedResize", function () {
   breakpointChecker();
 });
 

@@ -1404,12 +1404,12 @@ li {
 }
 
 .header {
-  height: 88px;
-  background: #fff;
   display: flex;
-  padding: 10px 0 0;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  height: 88px;
+  padding: 10px 0 0;
+  background: #fff;
 }
 
 .services {
@@ -1461,37 +1461,37 @@ li {
   font-family: "TT Lakes Regular";
   font-size: 16px;
   line-height: 24px;
-  color: #7E7E82;
+  color: #7e7e82;
 }
 
 .brands__item {
-  position: relative;
-  background: #FFFFFF;
-  border: 1px solid #EAEAEA;
-  border-radius: 6px;
-  width: 240px;
-  height: 72px;
   display: flex;
   align-items: center;
+  position: relative;
+  width: 240px;
+  height: 72px;
+  border: 1px solid #eaeaea;
+  background: #ffffff;
+  border-radius: 6px;
   padding-left: 16px;
   margin-bottom: 16px;
 }
 
 .brands__item::after {
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  transform: translate(0, -50%);
   content: "›";
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  right: 16px;
   width: 40px;
   height: 40px;
-  display: flex;
-  border: 2px solid #FF3E79;
+  border: 2px solid #ff3e79;
+  transform: translate(0, -50%);
   border-radius: 50px;
-  color: #FF3E79;
+  color: #ff3e79;
   font-size: 34px;
-  justify-content: center;
-  align-items: baseline;
   line-height: 33px;
   font-weight: 700;
 }
@@ -1511,15 +1511,15 @@ li {
 }
 
 .brands__btn::before {
-  position: absolute;
   content: "";
   display: block;
+  position: absolute;
+  top: 6px;
+  left: 0;
   width: 7px;
   height: 10px;
   background: url("../img/svg/arrow-down.svg");
   background-size: 7px 10px;
-  top: 6px;
-  left: 0;
 }
 
 .brands__btn--expanded::before {
@@ -1558,14 +1558,14 @@ li {
 }
 
 .header-menu__user-list::after {
-  display: block;
   content: " ";
+  display: block;
+  position: absolute;
+  top: 5px;
+  right: 0;
   width: 2px;
   height: 32px;
   background-color: #eaeaea;
-  position: absolute;
-  right: 0;
-  top: 5px;
 }
 
 .burger {
@@ -1578,9 +1578,9 @@ li {
 }
 
 .main-menu {
-  max-width: 320px;
   display: flex;
   flex-direction: column;
+  max-width: 320px;
   height: 725px;
   min-height: 100vh;
 }
@@ -1588,11 +1588,11 @@ li {
 .main-menu__user-list svg,
 .main-menu__btn-close svg,
 .main-menu__btn-search svg {
-  opacity: 0.7;
-  cursor: pointer;
-  transition: opacity 0.3s;
   width: 40px;
   height: 40px;
+  transition: opacity 0.3s;
+  opacity: 0.7;
+  cursor: pointer;
 }
 
 .main-menu__user-list svg:hover,
@@ -1603,8 +1603,8 @@ li {
 
 .main-menu__header {
   display: flex;
-  padding: 18px 23px 45px;
   align-items: center;
+  padding: 18px 23px 45px;
 }
 
 .main-menu__body {
@@ -1625,19 +1625,19 @@ li {
 .main-menu__item--active::before {
   content: " ";
   display: block;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
   width: 4px;
   height: 32px;
-  position: absolute;
   background-image: url("../img/svg/highlight.svg");
   background-size: 4px 32px;
-  left: 0;
-  bottom: -5px;
 }
 
 .main-menu__link {
   font-family: "TT Lakes Regular";
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: #1b1c21;
   font-size: 16px;
 }
 
@@ -1646,8 +1646,8 @@ li {
 }
 
 .main-menu__logo {
-  height: 50px;
   width: 97px;
+  height: 50px;
   margin-right: 80px;
 }
 
@@ -1725,9 +1725,9 @@ li {
 }
 
 .sub-menu__list {
+  display: flex;
   max-width: 980px;
   overflow-x: scroll;
-  display: flex;
   padding-bottom: 10px;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -1744,9 +1744,9 @@ li {
 }
 
 .sub-menu__item--active {
-  border: 2px solid #B8FFEC;
+  border: 2px solid #b8ffec;
   border-radius: 6px;
-  background: #FFFFFF;
+  background: #ffffff;
 }
 
 .sub-menu__link {
@@ -1754,7 +1754,7 @@ li {
   line-height: 24px;
   letter-spacing: -0.2px;
   font-family: "TT Lakes Regular";
-  color: #7E7E82;
+  color: #7e7e82;
 }
 
 .text {
@@ -1772,20 +1772,20 @@ li {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: -0.2px;
-  color: #1B1C21;
+  color: #1b1c21;
   font-family: "TT Lakes Medium";
   padding-left: 24px;
   margin-left: 24px;
 }
 
 .link-more::before {
-  display: block;
-  width: 8px;
-  height: 11px;
   content: " ";
+  display: block;
   position: absolute;
   top: 6px;
   left: 0;
+  width: 8px;
+  height: 11px;
   background-image: url("../img/svg/arrow-down.svg");
   background-size: 8px 11px;
 }
@@ -1801,14 +1801,14 @@ li {
   }
 
   .brands__wrapper {
+    box-sizing: border-box;
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
     align-items: center;
-    overflow: hidden;
+    justify-content: space-between;
     max-height: 210px;
+    overflow: hidden;
     transition: max-height 0.55s ease-out;
-    box-sizing: border-box;
   }
 
   .brands__wrapper--expanded {

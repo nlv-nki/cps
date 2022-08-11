@@ -3,18 +3,18 @@
 	font-size: 16px;
 	line-height: 24px;
 	letter-spacing: -0.2px;
-	color: #1B1C21;
+	color: #1b1c21;
 	font-family: 'TT Lakes Medium';
 	padding-left: 24px;
 	margin-left: 24px;
 	&::before {
-		display:block;
-		width: 8px;
-		height: 11px;
-		content: " ";
-		position:absolute;
+		content: ' ';
+		display: block;
+		position: absolute;
 		top: 6px;
 		left: 0;
+		width: 8px;
+		height: 11px;
 		background-image: url('../img/svg/arrow-down.svg');
 		background-size: 8px 11px;
 	}

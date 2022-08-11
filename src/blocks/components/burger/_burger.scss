@@ -1,9 +1,9 @@
 .burger {
-	margin:0 16px;
-	@media (min-width:1120px) {
-		display:none;
+	margin: 0 16px;
+	@media (min-width: 1120px) {
+		display: none;
 	}
-	&__icon  {
+	&__icon {
 		width: 40px;
 		height: 40px;
 	}

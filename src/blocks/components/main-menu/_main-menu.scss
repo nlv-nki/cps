@@ -1,13 +1,14 @@
 .main-menu {
 	max-width: 320px;
-	display:flex;
+	display: flex;
 	flex-direction: column;
 	height: 725px;
 	min-height: 100vh;
 
 	@media (min-width:768px) {
-		box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+		box-shadow: -2px 0px 4px rgba (69, 79, 126, 0.02), 16px 0px 52px rgba (14, 24, 80, 0.2);
 	}
+
 	&__user-list,
 	&__btn-close,
 	&__btn-search {
@@ -19,23 +20,24 @@
 			height: 40px;
 
 		}
+
 		svg:hover {
 			opacity: 1;
 		}
 	}
 
 	&__header {
-		display:flex;
-		padding:18px 23px 45px;
+		display: flex;
+		padding: 18px 23px 45px;
 		align-items: center;
 	}
 
 	&__body {
-		flex-grow:1;
+		flex-grow: 1;
 	}
 
 	&__list {
-		display:flex;
+		display: flex;
 		flex-direction: column;
 	}
 
@@ -46,7 +48,7 @@
 
 	}
 
-	&__item--active::before{
+	&__item--active::before {
 		content: " ";
 		display: block;
 		width: 4px;
@@ -82,7 +84,7 @@
 	}
 
 	&__user-list {
-		display:flex;
+		display: flex;
 		padding-bottom: 16px;
 
 		svg {
@@ -119,9 +121,10 @@
 
 	&__footer {
 		padding-left: 24px;
-		display:flex;
+		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+
 		.main-menu__link {
 			margin-right: 7px;
 		}

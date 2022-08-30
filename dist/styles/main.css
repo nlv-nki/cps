@@ -1578,11 +1578,20 @@ li {
 }
 
 .main-menu {
-  display: flex;
+  display: none;
   flex-direction: column;
   max-width: 320px;
   height: 725px;
   min-height: 100vh;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 3;
+  background: #ffffff;
+}
+
+.main-menu__js-is-active {
+  display: flex;
 }
 
 .main-menu__user-list svg,

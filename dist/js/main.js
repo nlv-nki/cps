@@ -1,6 +1,25 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/blocks/components/burger/burger.js":
+/*!************************************************!*\
+  !*** ./src/blocks/components/burger/burger.js ***!
+  \************************************************/
+/***/ (function() {
+
+var burger_btn = document.querySelector('.burger__btn');
+var close_main_menu_btn;
+var menu = document.querySelector('.main-menu');
+var menu_close_btn = document.querySelector('.main-menu__btn-close');
+burger_btn.addEventListener('click', function (e) {
+  if (!menu.classList.contains('main-menu__js-is-active')) menu.classList.add('main-menu__js-is-active');
+});
+menu_close_btn.addEventListener('click', function (e) {
+  if (menu.classList.contains('main-menu__js-is-active')) menu.classList.remove('main-menu__js-is-active');
+});
+
+/***/ }),
+
 /***/ "./src/blocks/modules/brands/brands.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/brands/brands.js ***!
@@ -94,8 +113,12 @@ window.addEventListener("optimizedResize", function () {
 /*!*************************************!*\
   !*** ./src/js/import/components.js ***!
   \*************************************/
-/***/ (function() {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %components%/burger/burger */ "./src/blocks/components/burger/burger.js");
+/* harmony import */ var _components_burger_burger__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_components_burger_burger__WEBPACK_IMPORTED_MODULE_0__);
 
 
 /***/ }),
@@ -123,7 +146,6 @@ __webpack_require__.r(__webpack_exports__);
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _import_modules__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./import/modules */ "./src/js/import/modules.js");
 /* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./import/components */ "./src/js/import/components.js");
-/* harmony import */ var _import_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_import_components__WEBPACK_IMPORTED_MODULE_1__);
 
 
 

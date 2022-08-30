@@ -1,9 +1,19 @@
 .main-menu {
-	display: flex;
+	// display: flex;
+	display: none;
 	flex-direction: column;
 	max-width: 320px;
 	height: 725px;
 	min-height: 100vh;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 3;
+	background: #ffffff;
+
+	&__js-is-active {
+		display: flex;
+	}
 
 	@media (min-width: 768px) {
 		box-shadow: -2px 0px 4px rgba (69, 79, 126, 0.02), 16px 0px 52px rgba (14, 24, 80, 0.2);

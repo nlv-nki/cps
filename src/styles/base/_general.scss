@@ -30,32 +30,35 @@ body {
 	text-rendering: optimizeLegibility;
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
-	color: #1B1C21;;
-	background: #F2F2F2;
+	color: #1b1c21;
+	background: #f2f2f2;
 }
 
 .content-box-component {
-    box-sizing: content-box;
+	box-sizing: content-box;
 }
 
-
-h1, h2, h3, h4, h5, h6, ul {
-    margin: 0;
-    padding: 0;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+	margin: 0;
+	padding: 0;
 }
-
 
 .container {
 	position: relative;
 	//margin: 0 auto;
 	width: 100%;
 	max-width: 1120px;
-    min-width: 320px;
-
+	min-width: 320px;
+	@media (min-width: 1120px) {
+		margin-left: 320px;
+	}
 }
-
-
-
 
 .section {
 	&__title {
@@ -64,9 +67,6 @@ h1, h2, h3, h4, h5, h6, ul {
 		line-height: 29px;
 	}
 }
-
-
-
 
 p {
 	margin: 0;
@@ -115,4 +115,3 @@ li {
 	margin: 0;
 	padding: 0;
 }
-

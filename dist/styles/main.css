@@ -1168,8 +1168,8 @@ body {
   text-rendering: optimizeLegibility;
   text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
-  color: #1B1C21;
-  background: #F2F2F2;
+  color: #1b1c21;
+  background: #f2f2f2;
 }
 
 .content-box-component {
@@ -1853,6 +1853,10 @@ li {
 }
 
 @media (min-width: 1120px) {
+  .container {
+    margin-left: 320px;
+  }
+
   .header {
     background: #f8f8f8;
   }
@@ -1885,6 +1889,10 @@ li {
 
   .burger {
     display: none;
+  }
+
+  .main-menu {
+    display: flex;
   }
 
   .logo {

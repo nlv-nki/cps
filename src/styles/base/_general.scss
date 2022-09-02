@@ -31,7 +31,8 @@ body {
 	text-size-adjust: 100%;
 	-webkit-tap-highlight-color: transparent;
 	color: #1b1c21;
-	background: #f2f2f2;
+	// background: #f2f2f2;
+	background: $main-background-color;
 }
 
 .content-box-component {

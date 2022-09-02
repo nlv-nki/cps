@@ -1,0 +1,22 @@
+.items-box {
+	&__wrapper {
+		padding: 40px 0;
+
+		@media (min-width: 768px) {
+			box-sizing: border-box;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: space-between;
+			max-height: 210px;
+			overflow: hidden;
+			transition: max-height 0.55s ease-out;
+		}
+	}
+	&__wrapper--expanded {
+		@media (min-width: 768px) {
+			max-height: 500px;
+			transition: max-height 0.45s ease-in;
+		}
+	}
+}

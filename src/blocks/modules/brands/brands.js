@@ -1,59 +1,27 @@
-import Swiper from "swiper/bundle";
+import Swiper from 'swiper/bundle';
+import { items_box_shower } from '../../components/items-box/items-box';
+let brands_container = document.querySelector('.brands__wrapper');
+let brands__btn = document.querySelector('.brands__js-btn-shower');
+brands__btn.addEventListener('click', () => {
+	items_box_shower(brands_container, brands__btn);
+});
 
-let brands_container = document.querySelector(".brands__wrapper");
-let brands__btn = document.querySelector(".brands__btn");
-
-const catalog_shower = () => {
-	if (!brands_container.classList.contains("brands__wrapper--expanded")) {
-		brands_container.classList.add("brands__wrapper--expanded");
-		brands__btn.innerText = "Свернуть";
-		brands__btn.classList.add("brands__btn--expanded");
-	} else {
-		brands_container.classList.remove("brands__wrapper--expanded");
-		brands__btn.classList.remove("brands__btn--expanded");
-		brands__btn.innerText = "Показать все";
-	}
-};
-
-brands__btn.addEventListener("click", catalog_shower);
-
-(function () {
-	var throttle = function (type, name, obj) {
-		obj = obj || window;
-		var running = false;
-		var func = function () {
-			if (running) {
-				return;
-			}
-			running = true;
-			requestAnimationFrame(function () {
-				obj.dispatchEvent(new CustomEvent(name));
-				running = false;
-			});
-		};
-		obj.addEventListener(type, func);
-	};
-
-	/* init - you can init any event */
-	throttle("resize", "optimizedResize");
-})();
-
-const breakpoint = window.matchMedia("(min-width: 768px)");
+const breakpoint = window.matchMedia('(min-width: 768px)');
 let swiper;
 
 const enableSwiper = function () {
-	swiper = new Swiper(".brands__swiper", {
+	swiper = new Swiper('.brands__swiper', {
 		slidesPerView: 1,
-		slidesPerView: "auto",
+		slidesPerView: 'auto',
 		spaceBetween: 15,
 		autoplay: true,
 		pagination: {
-			el: ".swiper-pagination",
+			el: '.swiper-pagination',
 			clickable: true,
 		},
 	});
 
-	console.log("onn 1");
+	console.log('onn 1');
 };
 
 const breakpointChecker = function () {
@@ -63,13 +31,14 @@ const breakpointChecker = function () {
 		return;
 	} else if (breakpoint.matches === false) {
 		// fire small viewport version of swiper
-		console.log("onn ");
+		console.log('onn ');
 
 		enableSwiper();
 	}
 };
 
 breakpointChecker();
-window.addEventListener("optimizedResize", () => {
+
+window.addEventListener('optimizedResize', () => {
 	breakpointChecker();
 });

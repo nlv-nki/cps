@@ -1,3 +1,2 @@
-import "%modules%/brands/brands";
-
-
+import '%modules%/brands/brands';
+import '%modules%/repair/repair';

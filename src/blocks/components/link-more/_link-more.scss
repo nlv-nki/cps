@@ -7,6 +7,7 @@
 	font-family: 'TT Lakes Medium';
 	padding-left: 24px;
 	margin-left: 24px;
+
 	&::before {
 		content: ' ';
 		display: block;
@@ -18,4 +19,24 @@
 		background-image: url('../img/svg/arrow-down.svg');
 		background-size: 8px 11px;
 	}
+
+	&--expanded::before {
+		transform: rotate(180deg);
+	}
+}
+
+.link-more__btn-reverse::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 6px;
+	left: 0;
+	width: 7px;
+	height: 10px;
+	background: url('../img/svg/arrow-down.svg');
+	background-size: 7px 10px;
+}
+
+.link-more__btn-reverse--expanded::before {
+	transform: rotate(180deg);
 }

@@ -1,3 +1,16 @@
 .footer {
 	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+
+	&__text {
+		margin-bottom: 17px;
+		font-family: 'TT Lakes Regular';
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		color: #7e7e82;
+		opacity: 0.72;
+	}
 }

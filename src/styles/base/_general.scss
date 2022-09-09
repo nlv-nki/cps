@@ -33,6 +33,7 @@ body {
 	color: #1b1c21;
 	// background: #f2f2f2;
 	background: $main-background-color;
+	height: 100vh;
 }
 
 .content-box-component {
@@ -56,7 +57,7 @@ ul {
 	width: 100%;
 	max-width: 1120px;
 	min-width: 320px;
-	@media (min-width: 1120px) {
+	@media (min-width: 1440px) {
 		margin-left: 320px;
 	}
 }

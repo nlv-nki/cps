@@ -3,14 +3,12 @@
 
 	&__list {
 		display: flex;
-		max-width: 980px;
+		//max-width: 980px;
 		overflow-x: scroll;
 		padding-bottom: 10px;
 		-ms-overflow-style: none;
 		scrollbar-width: none;
-		@media (min-width: 1120px) {
-			flex-wrap: wrap;
-		}
+		flex-wrap: wrap;
 	}
 
 	&__list::-webkit-scrollbar {

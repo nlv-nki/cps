@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>cps - kata eductation maket</title>
+    <title>CPS - Demonstration layout (markup, coding)</title>
     <meta name="theme-color" content="#fff">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
@@ -60,7 +60,7 @@
         <div class="main-menu__lan"><a class="main-menu__link" href="#">RU</a><a class="main-menu__link" href="#">EN</a><a class="main-menu__link" href="#">CH</a></div>
       </div>
     </div>
-    <header class="header container">
+    <header class="header">
       <div class="burger"><a class="burger__btn" href="#">
           <svg class="burger__icon">
             <use xlink:href="img/sprites/sprite.svg#burger"></use>
@@ -108,19 +108,29 @@
           </ul>
         </nav>
         <div class="content">
-          <div class="content__description">
-            <div class="content__description-wrapper">
+          <div class="content__description items-box">
+            <div class="content__description-wrapper items-box__wrapper">
               <p class="text">
                 Мы являемся авторизованным сервисным центром по ремонту техники Dell.
                 Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
               </p>
-              <p class="text">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера</p>
-            </div><a class="link-more" href="#">Читать далее</a>
+              <p class="text">
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера
+                Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.
+                Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.
+              </p>
+            </div><a class="link-more services__js-btn-shower" href="#">Читать далее</a>
           </div>
           <div class="content__images">
             <picture>
-              <source media="(min-width: 767px) end (max-width:1119px)" srcset="../img/mg_3223-tablet@1x.png 1x, ../img/mg_3223-tablet@2x.png 2x">
-              <source type="image/webp" media="(min-width: 767px) end (max-width:1119px)" srcset="../img/mg_3223-tablet@1x.webp 1x, ../img/mg_3223-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 767px)" srcset="../img/mg_3223-tablet@1x.webp 1x, ../img/mg_3223-tablet@2x.webp 2x">
+              <source media="(min-width: 767px)" srcset="../img/mg_3223-tablet@1x.png 1x, ../img/mg_3223-tablet@2x.png 2x">
               <source type="image/webp" media="(min-width: 1120px)" srcset="../img/mg_3223-desktop@1x.webp 1x, ../img/mg_3223-desktop@2x.webp 2x">
               <source media="(min-width: 1120px)" srcset="../img/mg_3223-desktop@1x.png 1x, ../img/mg_3223-desktop@2x.png 2x"><img src="../img/mg_3223-mobile@1x.png" srcset="../img/mg_3223-mobile@2x.png 2x">
             </picture>
@@ -162,11 +172,13 @@
       <section class="price container">
         <h2 class="price__title">Цены на услуги</h2>
         <div class="swiper price__swiper items-box">
-          <div class="price__services-header">
-            <div class="price__services-name">Ремонтные услуги</div>
-            <div class="price__services-cost">Цена</div>
-            <div class="price__services-time">Срок</div>
-          </div>
+          <table class="price__services-header">
+            <tr>
+              <td class="price__services-name">Ремонтные услуги</td>
+              <td class="price__services-cost">Цена</td>
+              <td class="price__services-time"> Срок</td>
+            </tr>
+          </table>
           <div class="swiper-wrapper items-box__wrapper price__wrapper">
             <div class="swiper-slide price__item">
               <div class="price__item-name"><span>Ремонтные услуги</span>
@@ -207,6 +219,42 @@
             <div class="swiper-slide price__item">
               <div class="price__item-name"><span>Ремонтные услуги</span>
                 <p>Тестирование с выдачей технического заключения</p>
+              </div>
+              <div class="price__item-cost"><span>Цена</span>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="price__item-time"><span>Срок</span>
+                <p>30-120 мин</p>
+              </div>
+              <div class="price__item-btn">Заказать</div>
+            </div>
+            <div class="swiper-slide price__item">
+              <div class="price__item-name"><span>Ремонтные услуги</span>
+                <p>Замена программного обеспечения</p>
+              </div>
+              <div class="price__item-cost"><span>Цена</span>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="price__item-time"><span>Срок</span>
+                <p>30-120 мин</p>
+              </div>
+              <div class="price__item-btn">Заказать</div>
+            </div>
+            <div class="swiper-slide price__item">
+              <div class="price__item-name"><span>Ремонтные услуги</span>
+                <p>Замена программного обеспечения</p>
+              </div>
+              <div class="price__item-cost"><span>Цена</span>
+                <p>1 000 ₽</p>
+              </div>
+              <div class="price__item-time"><span>Срок</span>
+                <p>30-120 мин</p>
+              </div>
+              <div class="price__item-btn">Заказать</div>
+            </div>
+            <div class="swiper-slide price__item">
+              <div class="price__item-name"><span>Ремонтные услуги</span>
+                <p>Замена программного обеспечения</p>
               </div>
               <div class="price__item-cost"><span>Цена</span>
                 <p>1 000 ₽</p>

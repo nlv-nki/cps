@@ -38,71 +38,57 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 
 
 
-(function () {
-  var throttle = function throttle(type, name, obj) {
-    obj = obj || window;
-    var running = false;
-
-    var func = function func() {
-      if (running) {
-        return;
-      }
-
-      running = true;
-      requestAnimationFrame(function () {
-        obj.dispatchEvent(new CustomEvent(name));
-        running = false;
-      });
-    };
-
-    obj.addEventListener(type, func);
-  };
-  /* init - you can init any event */
-
-
-  throttle('resize', 'optimizedResize');
-})();
-
 var items_box_shower = function items_box_shower(items_container, btn_shower) {
+  var btn_shower_values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
+    expanded: 'Показать все',
+    collapsed: 'Свернуть'
+  };
+
   if (!items_container.classList.contains('items-box__wrapper--expanded')) {
-    items_container.classList.add('items-box__wrapper--expanded');
-    btn_shower.innerText = 'Свернуть';
+    items_container.classList.add('items-box__wrapper--expanded'); //btn_shower.innerText = 'Свернуть';
+
+    btn_shower.innerText = btn_shower_values.collapsed;
     btn_shower.classList.add('link-more--expanded');
   } else {
     items_container.classList.remove('items-box__wrapper--expanded');
     items_container.classList.add('items-box__wrapper');
-    btn_shower.classList.remove('link-more--expanded');
-    btn_shower.innerText = 'Показать все';
+    btn_shower.classList.remove('link-more--expanded'); //	btn_shower.innerText = 'Показать все';
+
+    btn_shower.innerText = btn_shower_values.expanded;
   }
 };
 
 var swiper;
 
-var breakpointChecker = function breakpointChecker(swiper_container, breakpoint) {
-  console.log(breakpoint.matches); //let swiper;
-
+var breakpointChecker = function breakpointChecker(swiper_container, breakpoint, instance) {
   if (breakpoint.matches === true) {
-    console.log(swiper);
-    if (swiper !== undefined) swiper.destroy(true, true);
-    return;
-  } else if (breakpoint.matches === false) {
-    // fire small viewport version of swiper
-    console.log('breakpoint false' + ' swiper enable ');
-    swiper = enableSwiper(swiper_container);
-  } //console.log(swiper);
+    console.log(instance, 220);
 
+    if (instance !== undefined) {
+      console.log(instance, 221);
+      instance.destroy(true, true);
+      return;
+    }
+  } else if (breakpoint.matches === false) {
+    instance = enableSwiper(swiper_container);
+    return instance;
+  }
 };
 
 var enableSwiper = function enableSwiper(container) {
   var _Swiper;
 
-  var swiper = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](container, (_Swiper = {
+  return new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](container, (_Swiper = {
     slidesPerView: 1
   }, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "spaceBetween", 15), _defineProperty(_Swiper, "autoplay", true), _defineProperty(_Swiper, "pagination", {
     el: '.swiper-pagination',
     clickable: true
+  }), _defineProperty(_Swiper, "Observer", true), _defineProperty(_Swiper, "Parents", true), _defineProperty(_Swiper, "onSlideChangeEnd", function onSlideChangeEnd(swiper) {
+    swiper.update();
+    с;
+    mySwiper.startAutoplay();
+    mySwiper.reLoop();
   }), _Swiper));
-  return swiper;
 };
 
 
@@ -128,36 +114,12 @@ var brands__btn = document.querySelector('.brands__js-btn-shower');
 var breakpoint = window.matchMedia('(min-width: 768px)');
 brands__btn.addEventListener('click', function () {
   (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.items_box_shower)(brands_container, brands__btn);
-}); // const enableSwiper = function () {
-// 	let swiper;
-// 	swiper = new Swiper('.brands__swiper', {
-// 		slidesPerView: 1,
-// 		slidesPerView: 'auto',
-// 		spaceBetween: 15,
-// 		autoplay: true,
-// 		pagination: {
-// 			el: '.swiper-pagination',
-// 			clickable: true,
-// 		},
-// 	});
-// 	return swiper;
-// 	console.log('onn 1');
-// };
-// const breakpointChecker = function () {
-// 	console.log(breakpoint.matches);
-// 	if (breakpoint.matches === true) {
-// 		if (swiper !== undefined) swiper.destroy(true, true);
-// 		return;
-// 	} else if (breakpoint.matches === false) {
-// 		// fire small viewport version of swiper
-// 		console.log('onn ');
-// 		enableSwiper();
-// 	}
-// };
-
-(0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint);
-window.addEventListener('optimizedResize', function () {
-  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint);
+});
+brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint, brands__swiper);
+console.log(brands__swiper, 666);
+window.addEventListener('resize', function () {
+  brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint, brands__swiper);
+  console.log(brands__swiper, 667);
 });
 
 /***/ }),
@@ -182,9 +144,9 @@ var breakpoint = window.matchMedia('(min-width: 768px)');
 price__btn.addEventListener('click', function () {
   (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.items_box_shower)(price_container, price__btn);
 });
-(0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(price__swiper_container, breakpoint);
-window.addEventListener('optimizedResize', function () {
-  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(price__swiper_container, breakpoint);
+price__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(price__swiper_container, breakpoint, price__swiper);
+window.addEventListener('resize', function () {
+  price__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(price__swiper_container, breakpoint, price__swiper);
 });
 
 /***/ }),
@@ -197,9 +159,7 @@ window.addEventListener('optimizedResize', function () {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
-/* harmony import */ var _components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../components/items-box/items-box */ "./src/blocks/components/items-box/items-box.js");
-
+/* harmony import */ var _components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/items-box/items-box */ "./src/blocks/components/items-box/items-box.js");
 
 var repair_container = document.querySelector('.repair__wrapper');
 var repair__btn = document.querySelector('.repair__js-btn-shower');
@@ -207,12 +167,33 @@ var repair__swiper_container = document.querySelector('.repair__swiper');
 var repair__swiper = undefined;
 var breakpoint = window.matchMedia('(min-width: 768px)');
 repair__btn.addEventListener('click', function () {
-  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.items_box_shower)(repair_container, repair__btn);
+  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.items_box_shower)(repair_container, repair__btn);
 });
-(0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(repair__swiper_container, breakpoint);
-window.addEventListener('optimizedResize', function () {
-  console.log(123);
-  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(repair__swiper_container, breakpoint);
+repair__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.breakpointChecker)(repair__swiper_container, breakpoint, repair__swiper);
+window.addEventListener('resize', function () {
+  repair__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.breakpointChecker)(repair__swiper_container, breakpoint, repair__swiper);
+});
+
+/***/ }),
+
+/***/ "./src/blocks/modules/services/services.js":
+/*!*************************************************!*\
+  !*** ./src/blocks/modules/services/services.js ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../components/items-box/items-box */ "./src/blocks/components/items-box/items-box.js");
+
+var services_container = document.querySelector('.content__description-wrapper');
+var services__btn = document.querySelector('.services__js-btn-shower');
+var services_btn_shower_values = {
+  expanded: 'Читать далее',
+  collapsed: 'Свернуть'
+};
+services__btn.addEventListener('click', function () {
+  (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.items_box_shower)(services_container, services__btn, services_btn_shower_values);
 });
 
 /***/ }),
@@ -239,9 +220,11 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_brands_brands__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/brands/brands */ "./src/blocks/modules/brands/brands.js");
-/* harmony import */ var _modules_repair_repair__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/repair/repair */ "./src/blocks/modules/repair/repair.js");
-/* harmony import */ var _modules_price_price__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/price/price */ "./src/blocks/modules/price/price.js");
+/* harmony import */ var _modules_services_services__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! %modules%/services/services */ "./src/blocks/modules/services/services.js");
+/* harmony import */ var _modules_brands_brands__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %modules%/brands/brands */ "./src/blocks/modules/brands/brands.js");
+/* harmony import */ var _modules_repair_repair__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %modules%/repair/repair */ "./src/blocks/modules/repair/repair.js");
+/* harmony import */ var _modules_price_price__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %modules%/price/price */ "./src/blocks/modules/price/price.js");
+
 
 
 

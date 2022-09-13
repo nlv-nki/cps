@@ -10,36 +10,10 @@ brands__btn.addEventListener('click', () => {
 	items_box_shower(brands_container, brands__btn);
 });
 
-// const enableSwiper = function () {
-// 	let swiper;
-// 	swiper = new Swiper('.brands__swiper', {
-// 		slidesPerView: 1,
-// 		slidesPerView: 'auto',
-// 		spaceBetween: 15,
-// 		autoplay: true,
-// 		pagination: {
-// 			el: '.swiper-pagination',
-// 			clickable: true,
-// 		},
-// 	});
-// 	return swiper;
-// 	console.log('onn 1');
-// };
+brands__swiper = breakpointChecker(brands__swiper_container, breakpoint, brands__swiper);
+console.log(brands__swiper, 666);
+window.addEventListener('resize', () => {
+	brands__swiper = breakpointChecker(brands__swiper_container, breakpoint, brands__swiper);
 
-// const breakpointChecker = function () {
-// 	console.log(breakpoint.matches);
-// 	if (breakpoint.matches === true) {
-// 		if (swiper !== undefined) swiper.destroy(true, true);
-// 		return;
-// 	} else if (breakpoint.matches === false) {
-// 		// fire small viewport version of swiper
-// 		console.log('onn ');
-
-// 		enableSwiper();
-// 	}
-// };
-
-breakpointChecker(brands__swiper_container, breakpoint);
-window.addEventListener('optimizedResize', () => {
-	breakpointChecker(brands__swiper_container, breakpoint);
+	console.log(brands__swiper, 667);
 });

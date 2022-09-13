@@ -11,7 +11,7 @@ price__btn.addEventListener('click', () => {
 	items_box_shower(price_container, price__btn);
 });
 
-breakpointChecker(price__swiper_container, breakpoint);
-window.addEventListener('optimizedResize', () => {
-	breakpointChecker(price__swiper_container, breakpoint);
+price__swiper = breakpointChecker(price__swiper_container, breakpoint, price__swiper);
+window.addEventListener('resize', () => {
+	price__swiper = breakpointChecker(price__swiper_container, breakpoint, price__swiper);
 });

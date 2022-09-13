@@ -1,55 +1,37 @@
 import Swiper from 'swiper/bundle';
-(function () {
-	var throttle = function (type, name, obj) {
-		obj = obj || window;
-		var running = false;
-		var func = function () {
-			if (running) {
-				return;
-			}
-			running = true;
-			requestAnimationFrame(function () {
-				obj.dispatchEvent(new CustomEvent(name));
-				running = false;
-			});
-		};
-		obj.addEventListener(type, func);
-	};
 
-	/* init - you can init any event */
-	throttle('resize', 'optimizedResize');
-})();
-
-const items_box_shower = (items_container, btn_shower) => {
+const items_box_shower = (items_container, btn_shower, btn_shower_values = { expanded: 'Показать все', collapsed: 'Свернуть' }) => {
 	if (!items_container.classList.contains('items-box__wrapper--expanded')) {
 		items_container.classList.add('items-box__wrapper--expanded');
-		btn_shower.innerText = 'Свернуть';
+		//btn_shower.innerText = 'Свернуть';
+		btn_shower.innerText = btn_shower_values.collapsed;
 		btn_shower.classList.add('link-more--expanded');
 	} else {
 		items_container.classList.remove('items-box__wrapper--expanded');
 		items_container.classList.add('items-box__wrapper');
 		btn_shower.classList.remove('link-more--expanded');
-		btn_shower.innerText = 'Показать все';
+		//	btn_shower.innerText = 'Показать все';
+		btn_shower.innerText = btn_shower_values.expanded;
 	}
 };
 let swiper;
-const breakpointChecker = function (swiper_container, breakpoint) {
-	console.log(breakpoint.matches);
-	//let swiper;
+const breakpointChecker = function (swiper_container, breakpoint, instance) {
 	if (breakpoint.matches === true) {
-		console.log(swiper);
-		if (swiper !== undefined) swiper.destroy(true, true);
-		return;
+		console.log(instance, 220);
+
+		if (instance !== undefined) {
+			console.log(instance, 221);
+			instance.destroy(true, true);
+			return;
+		}
 	} else if (breakpoint.matches === false) {
-		// fire small viewport version of swiper
-		console.log('breakpoint false' + ' swiper enable ');
-		swiper = enableSwiper(swiper_container);
+		instance = enableSwiper(swiper_container);
+		return instance;
 	}
-	//console.log(swiper);
 };
 
 const enableSwiper = function (container) {
-	let swiper = new Swiper(container, {
+	return new Swiper(container, {
 		slidesPerView: 1,
 		slidesPerView: 'auto',
 		spaceBetween: 15,
@@ -58,8 +40,15 @@ const enableSwiper = function (container) {
 			el: '.swiper-pagination',
 			clickable: true,
 		},
+		Observer: true,
+		Parents: true,
+		onSlideChangeEnd: function (swiper) {
+			swiper.update();
+			с;
+			mySwiper.startAutoplay();
+			mySwiper.reLoop();
+		},
 	});
-	return swiper;
 };
 
 export { items_box_shower, enableSwiper, breakpointChecker };

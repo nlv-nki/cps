@@ -30,9 +30,7 @@ menu_close_btn.addEventListener('click', function (e) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "breakpointChecker": function() { return /* binding */ breakpointChecker; },
-/* harmony export */   "enableSwiper": function() { return /* binding */ enableSwiper; },
-/* harmony export */   "items_box_shower": function() { return /* binding */ items_box_shower; },
-/* harmony export */   "swiper_params": function() { return /* binding */ swiper_params; }
+/* harmony export */   "items_box_shower": function() { return /* binding */ items_box_shower; }
 /* harmony export */ });
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
 var _swiper_params;

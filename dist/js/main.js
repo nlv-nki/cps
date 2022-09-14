@@ -31,12 +31,27 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "breakpointChecker": function() { return /* binding */ breakpointChecker; },
 /* harmony export */   "enableSwiper": function() { return /* binding */ enableSwiper; },
-/* harmony export */   "items_box_shower": function() { return /* binding */ items_box_shower; }
+/* harmony export */   "items_box_shower": function() { return /* binding */ items_box_shower; },
+/* harmony export */   "swiper_params": function() { return /* binding */ swiper_params; }
 /* harmony export */ });
 /* harmony import */ var swiper_bundle__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! swiper/bundle */ "./node_modules/swiper/swiper-bundle.esm.js");
+var _swiper_params;
+
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 
+var instances = {};
+var swiper_params = (_swiper_params = {
+  slidesPerView: 1
+}, _defineProperty(_swiper_params, "slidesPerView", 'auto'), _defineProperty(_swiper_params, "spaceBetween", 15), _defineProperty(_swiper_params, "autoplay", true), _defineProperty(_swiper_params, "pagination", {
+  el: '.swiper-pagination',
+  clickable: true
+}), _defineProperty(_swiper_params, "Observer", true), _defineProperty(_swiper_params, "Parents", true), _defineProperty(_swiper_params, "onSlideChangeEnd", function onSlideChangeEnd(swiper) {
+  swiper.update();
+  с;
+  mySwiper.startAutoplay();
+  mySwiper.reLoop();
+}), _swiper_params);
 
 var items_box_shower = function items_box_shower(items_container, btn_shower) {
   var btn_shower_values = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {
@@ -45,51 +60,40 @@ var items_box_shower = function items_box_shower(items_container, btn_shower) {
   };
 
   if (!items_container.classList.contains('items-box__wrapper--expanded')) {
-    items_container.classList.add('items-box__wrapper--expanded'); //btn_shower.innerText = 'Свернуть';
-
+    items_container.classList.add('items-box__wrapper--expanded');
     btn_shower.innerText = btn_shower_values.collapsed;
     btn_shower.classList.add('link-more--expanded');
   } else {
     items_container.classList.remove('items-box__wrapper--expanded');
     items_container.classList.add('items-box__wrapper');
-    btn_shower.classList.remove('link-more--expanded'); //	btn_shower.innerText = 'Показать все';
-
+    btn_shower.classList.remove('link-more--expanded');
     btn_shower.innerText = btn_shower_values.expanded;
   }
 };
 
-var swiper;
+var breakpointChecker = function breakpointChecker(swiper_container, breakpoint) {
+  var swiper_instance_name = swiper_container.classList[1];
 
-var breakpointChecker = function breakpointChecker(swiper_container, breakpoint, instance) {
   if (breakpoint.matches === true) {
-    console.log(instance, 220);
-
-    if (instance !== undefined) {
-      console.log(instance, 221);
-      instance.destroy(true, true);
-      return;
+    if (instances.hasOwnProperty(swiper_instance_name) === true) {
+      swiper_container.firstElementChild.setAttribute('style', '');
+      instances[swiper_instance_name].destroy(true, true);
+      delete instances[swiper_instance_name];
+      return false;
     }
-  } else if (breakpoint.matches === false) {
-    instance = enableSwiper(swiper_container);
-    return instance;
+  }
+
+  if (breakpoint.matches === false) {
+    if (instances.hasOwnProperty(swiper_instance_name) === false) {
+      instances[swiper_instance_name] = enableSwiper(swiper_container);
+      return instances[swiper_instance_name];
+    }
   }
 };
 
-var enableSwiper = function enableSwiper(container) {
-  var _Swiper;
-
-  return new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](container, (_Swiper = {
-    slidesPerView: 1
-  }, _defineProperty(_Swiper, "slidesPerView", 'auto'), _defineProperty(_Swiper, "spaceBetween", 15), _defineProperty(_Swiper, "autoplay", true), _defineProperty(_Swiper, "pagination", {
-    el: '.swiper-pagination',
-    clickable: true
-  }), _defineProperty(_Swiper, "Observer", true), _defineProperty(_Swiper, "Parents", true), _defineProperty(_Swiper, "onSlideChangeEnd", function onSlideChangeEnd(swiper) {
-    swiper.update();
-    с;
-    mySwiper.startAutoplay();
-    mySwiper.reLoop();
-  }), _Swiper));
-};
+function enableSwiper(container) {
+  return new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"](container, swiper_params);
+}
 
 
 
@@ -108,18 +112,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 var brands_container = document.querySelector('.brands__wrapper');
-var brands__swiper = undefined;
+var brands__swiper;
 var brands__swiper_container = document.querySelector('.brands__swiper');
 var brands__btn = document.querySelector('.brands__js-btn-shower');
 var breakpoint = window.matchMedia('(min-width: 768px)');
 brands__btn.addEventListener('click', function () {
   (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.items_box_shower)(brands_container, brands__btn);
 });
-brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint, brands__swiper);
-console.log(brands__swiper, 666);
-window.addEventListener('resize', function () {
-  brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint, brands__swiper);
-  console.log(brands__swiper, 667);
+brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint);
+window.addEventListener('resize', function (e) {
+  brands__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_1__.breakpointChecker)(brands__swiper_container, breakpoint);
 });
 
 /***/ }),
@@ -169,7 +171,7 @@ var breakpoint = window.matchMedia('(min-width: 768px)');
 repair__btn.addEventListener('click', function () {
   (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.items_box_shower)(repair_container, repair__btn);
 });
-repair__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.breakpointChecker)(repair__swiper_container, breakpoint, repair__swiper);
+repair__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.breakpointChecker)(repair__swiper_container, breakpoint);
 window.addEventListener('resize', function () {
   repair__swiper = (0,_components_items_box_items_box__WEBPACK_IMPORTED_MODULE_0__.breakpointChecker)(repair__swiper_container, breakpoint, repair__swiper);
 });

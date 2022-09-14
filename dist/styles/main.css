@@ -1468,6 +1468,10 @@ li {
   text-transform: uppercase;
 }
 
+.brands__wrapper {
+  margin-bottom: 20px;
+}
+
 .brands__item {
   display: flex;
   align-items: center;
@@ -1549,6 +1553,7 @@ li {
 
 .repair__wrapper {
   padding: 40px 0;
+  margin-bottom: 20px;
 }
 
 .price {
@@ -1951,8 +1956,22 @@ li {
   transform: rotate(180deg);
 }
 
+.link-more--show_on_mobile {
+  display: block;
+}
+
 .items-box__wrapper {
   padding: 20px 0;
+}
+
+.items-box__wrapper--show_on_mobile {
+  overflow: hidden;
+  max-height: 190px;
+}
+
+.items-box__wrapper--expanded {
+  max-height: 1200px;
+  transition: max-height 0.45s ease-in;
 }
 
 .content {
@@ -1962,6 +1981,11 @@ li {
 
 .content__images {
   width: 100%;
+}
+
+.content__description-wrapper {
+  padding-bottom: 5px;
+  margin-bottom: 20px;
 }
 
 @media (min-width: 768px) {

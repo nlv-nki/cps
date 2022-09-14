@@ -10,7 +10,9 @@
 		letter-spacing: -0.2px;
 		text-transform: uppercase;
 	}
-
+	&__wrapper {
+		margin-bottom: 20px;
+	}
 	&__item {
 		display: flex;
 		align-items: center;

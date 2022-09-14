@@ -14,10 +14,22 @@
 			transition: max-height 0.55s ease-out;
 		}
 	}
+
+	&__wrapper--show_on_mobile {
+		overflow: hidden;
+		max-height: 190px;
+		//margin-bottom: 15px;
+	}
+
 	&__wrapper--expanded {
 		@media (min-width: 768px) {
 			max-height: 1200px;
 			transition: max-height 0.45s ease-in;
 		}
+	}
+
+	&__wrapper--expanded {
+		max-height: 1200px;
+		transition: max-height 0.45s ease-in;
 	}
 }

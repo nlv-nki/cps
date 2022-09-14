@@ -5,6 +5,11 @@
 		width: 100%;
 	}
 
+	&__description-wrapper {
+		padding-bottom: 5px;
+		margin-bottom: 20px;
+	}
+
 	@media (min-width: 768px) {
 		flex-direction: row;
 

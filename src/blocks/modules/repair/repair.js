@@ -9,7 +9,7 @@ const breakpoint = window.matchMedia('(min-width: 768px)');
 repair__btn.addEventListener('click', () => {
 	items_box_shower(repair_container, repair__btn);
 });
-repair__swiper = breakpointChecker(repair__swiper_container, breakpoint, repair__swiper);
+repair__swiper = breakpointChecker(repair__swiper_container, breakpoint);
 window.addEventListener('resize', () => {
 	repair__swiper = breakpointChecker(repair__swiper_container, breakpoint, repair__swiper);
 });

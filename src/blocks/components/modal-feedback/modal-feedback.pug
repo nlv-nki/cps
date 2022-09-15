@@ -1,0 +1,13 @@
+.modal-feedback
+	button.btn__modal.modal-feedback__btn-close
+		svg.modal-feedback__icon-close
+			use(xlink:href="img/sprites/sprite.svg#close")
+	h2.modal-feedback__title Обратная связь
+	form.modal-feedback__form
+		input(type="text", placeholder="Имя").modal-feedback__input
+		input(type="text", placeholder="Телефон").modal-feedback__input
+		input(type="text", placeholder="Электронная почта").modal-feedback__input
+		textarea(placeholder="Сообщение").modal-feedback__textarea
+	p.modal-feedback__text
+		|Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности
+	button.btn.btn__submit.modal-feedback__btn-submit  ОТПРАВИТЬ

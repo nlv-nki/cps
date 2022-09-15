@@ -45,15 +45,21 @@
       </div>
       <div class="main-menu__footer">
         <div class="main-menu__user-list">
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#call"></use>
-          </svg>
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#chat"></use>
-          </svg>
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#profile"></use>
-          </svg>
+          <button class="btn__modal main-menu__btn main-menu__btn-call">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#call"></use>
+            </svg>
+          </button>
+          <button class="btn__modal main-menu__btn main-menu__btn-modal">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#chat"></use>
+            </svg>
+          </button>
+          <button class="btn__modal main-menu__btn main-menu__btn-profile">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#profile"></use>
+            </svg>
+          </button>
         </div>
         <div class="main-menu__mailto">mail@cps.com</div>
         <div class="main-menu__call">8 800 890 8900</div>
@@ -61,36 +67,49 @@
       </div>
     </div>
     <header class="header">
-      <div class="burger"><a class="burger__btn" href="#">
-          <svg class="burger__icon">
+      <div class="burger">
+        <button class="btn__modal header-menu__btn burger__btn">
+          <svg>
             <use xlink:href="img/sprites/sprite.svg#burger"></use>
-          </svg></a></div>
+          </svg>
+        </button>
+      </div>
       <div class="logo">
         <svg>
           <use xlink:href="img/sprites/sprite.svg#logo"></use>
         </svg>
       </div>
       <div class="header-menu__user-list">
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#call"></use>
-        </svg>
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#chat"></use>
-        </svg>
-        <svg>
-          <use xlink:href="img/sprites/sprite.svg#profile"></use>
-        </svg>
+        <button class="btn__modal header-menu__btn header-menu__btn-call">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#call"></use>
+          </svg>
+        </button>
+        <button class="btn__modal header-menu__btn header-menu__btn-modal">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#chat"></use>
+          </svg>
+        </button>
+        <button class="btn__modal header-menu__btn header-menu__btn-profile">
+          <svg>
+            <use xlink:href="img/sprites/sprite.svg#profile"></use>
+          </svg>
+        </button>
       </div>
       <div class="header-menu__services">
         <div class="header-menu__service-item"><span class="header-menu__service-name">Оставить заявку</span>
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#repair"></use>
-          </svg>
+          <button class="btn__modal header-menu__btn header-menu__btn-request">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#repair"></use>
+            </svg>
+          </button>
         </div>
         <div class="header-menu__service-item"><span class="header-menu__service-name">Статус ремонта</span>
-          <svg>
-            <use xlink:href="img/sprites/sprite.svg#checkstatus"></use>
-          </svg>
+          <button class="btn__modal header-menu__btn header-menu__btn-checkstatus">
+            <svg>
+              <use xlink:href="img/sprites/sprite.svg#checkstatus"></use>
+            </svg>
+          </button>
         </div>
       </div>
       <h1 class="services__title">Услуги и сервисы</h1>
@@ -278,15 +297,14 @@
             </div>
           </div>
           <div class="swiper-pagination"></div>
-        </div><a class="link-more price__js-btn-shower">Показать все</a>
+        </div>
+        <div class="price__price-description">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</div><a class="link-more price__js-btn-shower">Показать все</a><a class="link-more__inner-pages">Получить коммерческое предложение</a>
       </section>
     </main>
     <footer class="footer container">
       <div class="footer__text">
-        <p>
-          © 2019 CPS
-          Разработано командой
-        </p>
+        <p> © 2019 CPS</p>
+        <p>Разработано командой</p>
       </div>
       <div class="footer__text">
         <p>Политика конфиденциальности</p>
@@ -295,6 +313,23 @@
         <p>Информация, размещенная на данной странице, не является публичной офертой</p>
       </div>
     </footer>
+    <div class="overlay-cat"></div>
+    <div class="modal-feedback">
+      <button class="btn__modal modal-feedback__btn-close">
+        <svg class="modal-feedback__icon-close">
+          <use xlink:href="img/sprites/sprite.svg#close"></use>
+        </svg>
+      </button>
+      <h2 class="modal-feedback__title">Обратная связь</h2>
+      <form class="modal-feedback__form">
+        <input class="modal-feedback__input" type="text" placeholder="Имя">
+        <input class="modal-feedback__input" type="text" placeholder="Телефон">
+        <input class="modal-feedback__input" type="text" placeholder="Электронная почта">
+        <textarea class="modal-feedback__textarea" placeholder="Сообщение"></textarea>
+      </form>
+      <p class="modal-feedback__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+      <button class="btn btn__submit modal-feedback__btn-submit"> ОТПРАВИТЬ</button>
+    </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>
   </body>

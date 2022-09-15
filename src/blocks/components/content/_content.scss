@@ -4,12 +4,12 @@
 
 	&__images {
 		width: 100%;
-		@media (max-width: 768px) {
+		@media (max-width: 767px) {
 			order: 1;
 		}
 	}
 	&__description {
-		@media (max-width: 768px) {
+		@media (max-width: 767px) {
 			order: 2;
 		}
 	}

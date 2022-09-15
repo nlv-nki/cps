@@ -1,9 +1,11 @@
 .logo {
-	padding-right: 16px;
+	//padding-right: 16px;
+	margin-right: auto;
 	position: relative;
 
-	@media (min-width: 1440px) {
-		display: none;
+	svg {
+		width: 97px;
+		height: 50px;
 	}
 
 	&::after {
@@ -21,8 +23,12 @@
 		}
 	}
 
-	svg {
-		width: 97px;
-		height: 50px;
+	@media (min-width: 768px) {
+		//margin-left: 25px;
+		margin-right: 200px;
+	}
+
+	@media (min-width: 1440px) {
+		display: none;
 	}
 }

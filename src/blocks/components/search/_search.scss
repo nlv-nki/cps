@@ -1,0 +1,21 @@
+.search {
+	height: 40px;
+	position: relative;
+
+	&__input {
+		border: 2px solid #ff3e79;
+		border-radius: 8px;
+		left: -150px;
+		position: absolute;
+		width: 17px;
+		height: 35px;
+		top: 3px;
+		outline: none;
+		opacity: 0;
+		transition: all 1s linear 1s;
+	}
+
+	&__input--active {
+		left: 1px;
+	}
+}

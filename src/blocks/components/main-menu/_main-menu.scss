@@ -1,7 +1,8 @@
 .main-menu {
 	display: none;
+	position: fixed;
+	height: 100vh;
 	flex-direction: column;
-	height: 100%;
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -98,7 +99,33 @@
 	&__btn-search {
 		width: 40px;
 		height: 40px;
+		position: relative;
+		z-index: 2;
+		background-color: #fff;
+		border-radius: 20px;
 	}
+
+	&__header.main-menu__search-active > &__logo {
+		opacity: 0;
+	}
+
+	&__header.main-menu__search-active .search__input {
+		width: 170px;
+		opacity: 1;
+		//left: -150px;
+	}
+	// /* It's a pseudo element. */
+
+	// 	&__header.main-menu__search-active .search__input::before {
+	// 		display: block;
+	// 		position: absolute;
+	// 		width: 20px;
+	// 		height: 20px;
+	// 		content: 'X';
+	// 		color: #666;
+	// 		left: 0;
+	// 		top: 0;
+	// 	}
 
 	&__user-list {
 		display: flex;

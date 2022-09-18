@@ -131,12 +131,19 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modal_feedback_modal_feedback__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../modal-feedback/modal-feedback */ "./src/blocks/components/modal-feedback/modal-feedback.js");
 
 var menu = document.querySelector('.main-menu');
+var menu__header = document.querySelector('.main-menu__header');
 var overlay = document.querySelector('.overlay-cat');
 var menu_close_btn = document.querySelector('.main-menu__btn-close');
 var main_menu_userlist = document.querySelector('.main-menu__user-list');
+var menu_search_btn = document.querySelector('.main-menu__btn-search');
 menu_close_btn.addEventListener('click', function (e) {
   if (menu.classList.contains('main-menu__js-is-active')) menu.classList.remove('main-menu__js-is-active');
   overlay.classList.remove('active');
+});
+menu_search_btn.addEventListener('click', function (e) {
+  if (!menu__header.classList.contains('main-menu__search-active')) {
+    menu__header.classList.add('main-menu__search-active');
+  } else menu__header.classList.remove('main-menu__search-active');
 });
 main_menu_userlist.addEventListener('click', function (e) {
   var target = e.target.closest('BUTTON');

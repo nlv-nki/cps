@@ -1822,8 +1822,9 @@ li {
 
 .main-menu {
   display: none;
+  position: fixed;
+  height: 100vh;
   flex-direction: column;
-  height: 100%;
   position: absolute;
   left: 0;
   top: 0;
@@ -1905,6 +1906,19 @@ li {
 .main-menu__btn-search {
   width: 40px;
   height: 40px;
+  position: relative;
+  z-index: 2;
+  background-color: #fff;
+  border-radius: 20px;
+}
+
+.main-menu__header.main-menu__search-active > .main-menu__logo {
+  opacity: 0;
+}
+
+.main-menu__header.main-menu__search-active .search__input {
+  width: 170px;
+  opacity: 1;
 }
 
 .main-menu__user-list {
@@ -2124,6 +2138,28 @@ li {
 
 .content__description-wrapper.items-box__wrapper--expanded:after {
   background: transparent;
+}
+
+.search {
+  height: 40px;
+  position: relative;
+}
+
+.search__input {
+  border: 2px solid #ff3e79;
+  border-radius: 8px;
+  left: -150px;
+  position: absolute;
+  width: 17px;
+  height: 35px;
+  top: 3px;
+  outline: none;
+  opacity: 0;
+  transition: all 1s linear 1s;
+}
+
+.search__input--active {
+  left: 1px;
 }
 
 .modal-feedback {

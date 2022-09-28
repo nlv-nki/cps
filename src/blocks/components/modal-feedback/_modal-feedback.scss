@@ -2,9 +2,9 @@
 	position: absolute;
 	display: none;
 	flex-direction: column;
-	//justify-content: space-between;
 	z-index: 999;
-	top: 0;
+	top: 35%;
+	transform: translateY(-50%);
 	right: 0;
 	width: 320px;
 	height: 678px;

@@ -3,7 +3,6 @@
 	position: fixed;
 	height: 100vh;
 	flex-direction: column;
-	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 999;
@@ -94,6 +93,7 @@
 		width: 97px;
 		height: 50px;
 		margin-right: 80px;
+		transition: opacity 0.5s linear 0.1s;
 	}
 
 	&__btn-search {
@@ -105,27 +105,19 @@
 		border-radius: 20px;
 	}
 
-	&__header.main-menu__search-active > &__logo {
-		opacity: 0;
+	@media (max-width: 1439px) {
+		&__header.main-menu__search-active > &__logo {
+			opacity: 0;
+		}
+	}
+
+	&__header.main-menu__search-active .search {
+		width: 200px;
 	}
 
 	&__header.main-menu__search-active .search__input {
-		width: 170px;
 		opacity: 1;
-		//left: -150px;
 	}
-	// /* It's a pseudo element. */
-
-	// 	&__header.main-menu__search-active .search__input::before {
-	// 		display: block;
-	// 		position: absolute;
-	// 		width: 20px;
-	// 		height: 20px;
-	// 		content: 'X';
-	// 		color: #666;
-	// 		left: 0;
-	// 		top: 0;
-	// 	}
 
 	&__user-list {
 		display: flex;

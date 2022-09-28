@@ -1,18 +1,30 @@
 .search {
 	height: 40px;
-	position: relative;
+	position: absolute;
+	top: 23px;
+	right: 15px;
+	width: 55px;
+	display: flex;
+	justify-content: flex-end;
+	transition: width 0.5s linear 0.1s;
+
+	&__inner-box {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+	}
 
 	&__input {
-		border: 2px solid #ff3e79;
+		border: 1px solid #ff3e79;
+		outline: none;
 		border-radius: 8px;
-		left: -150px;
-		position: absolute;
-		width: 17px;
+		position: relative;
+		right: -20px;
+		opacity: 0;
+		transition: opacity 0.5s linear 0.15s;
+		width: 87.2%;
 		height: 35px;
 		top: 3px;
-		outline: none;
-		opacity: 0;
-		transition: all 1s linear 1s;
 	}
 
 	&__input--active {

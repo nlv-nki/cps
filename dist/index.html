@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
+    <div class="overlay-cat"></div>
     <div class="main-menu">
       <div class="main-menu__header">
         <div class="main-menu__btn-close">
@@ -318,22 +319,50 @@
         <p>Информация, размещенная на данной странице, не является публичной офертой</p>
       </div>
     </footer>
-    <div class="overlay-cat"></div>
-    <div class="modal-feedback">
-      <button class="btn__modal modal-feedback__btn-close">
-        <svg class="modal-feedback__icon-close">
-          <use xlink:href="img/sprites/sprite.svg#close"></use>
-        </svg>
-      </button>
-      <h2 class="modal-feedback__title">Обратная связь</h2>
-      <form class="modal-feedback__form">
-        <input class="modal-feedback__input" type="text" placeholder="Имя">
-        <input class="modal-feedback__input" type="text" placeholder="Телефон">
-        <input class="modal-feedback__input" type="text" placeholder="Электронная почта">
-        <textarea class="modal-feedback__textarea" placeholder="Сообщение"></textarea>
-      </form>
-      <p class="modal-feedback__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
-      <button class="btn btn__submit modal-feedback__btn-submit"> ОТПРАВИТЬ</button>
+    <div class="modals">
+      <div class="modalW modal-feedback">
+        <button class="btn__modal modalW__btn-close modal-feedback__btn-close">
+          <svg class="modal-feedback__icon-close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modal-feedback__title">Обратная связь</h2>
+        <form class="modal-feedback__form">
+          <input class="modal-feedback__input" type="text" placeholder="Имя">
+          <input class="modal-feedback__input" type="text" placeholder="Телефон">
+          <input class="modal-feedback__input" type="text" placeholder="Электронная почта">
+          <textarea class="modal-feedback__textarea" placeholder="Сообщение"></textarea>
+        </form>
+        <p class="modal-feedback__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modal-feedback__btn-submit"> ОТПРАВИТЬ</button>
+      </div>
+      <div class="modalW modal-call">
+        <button class="btn__modal modal-call__btn-close modalW__btn-close">
+          <svg class="modalW__icon-close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modalW__title">Заказть звонок</h2>
+        <form class="modalW__form">
+          <input class="modalW__input" type="text" placeholder="Телефон">
+        </form>
+        <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>
+      </div>
+      <div class="modalW modal-profile">
+        <button class="btn__modal modal-profile__btn-close modalW__btn-close">
+          <svg class="modalW__icon-close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modalW__title">Войти в кабинет заказов</h2>
+        <form class="modalW__form">
+          <input class="modalW__input" type="text" placeholder="Телефон">
+          <input class="modalW__input" type="text" placeholder="Номер заказы">
+        </form>
+        <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>
+      </div>
     </div>
     <script src="js/vendor.js"></script>
     <script src="js/main.js"></script>

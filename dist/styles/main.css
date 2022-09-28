@@ -1252,23 +1252,6 @@ li {
   padding: 0;
 }
 
-.overlay-cat.active {
-  display: block;
-}
-
-.overlay-cat {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  mix-blend-mode: normal;
-  opacity: 0.86;
-  display: none;
-  z-index: 997;
-}
-
 .icon-arrow-down,
 .icon-arrow-down-before::before,
 .icon-arrow-down-after::after {
@@ -1825,7 +1808,6 @@ li {
   position: fixed;
   height: 100vh;
   flex-direction: column;
-  position: absolute;
   left: 0;
   top: 0;
   z-index: 999;
@@ -1901,6 +1883,7 @@ li {
   width: 97px;
   height: 50px;
   margin-right: 80px;
+  transition: opacity 0.5s linear 0.1s;
 }
 
 .main-menu__btn-search {
@@ -1912,12 +1895,11 @@ li {
   border-radius: 20px;
 }
 
-.main-menu__header.main-menu__search-active > .main-menu__logo {
-  opacity: 0;
+.main-menu__header.main-menu__search-active .search {
+  width: 200px;
 }
 
 .main-menu__header.main-menu__search-active .search__input {
-  width: 170px;
   opacity: 1;
 }
 
@@ -2142,20 +2124,32 @@ li {
 
 .search {
   height: 40px;
-  position: relative;
+  position: absolute;
+  top: 23px;
+  right: 15px;
+  width: 55px;
+  display: flex;
+  justify-content: flex-end;
+  transition: width 0.5s linear 0.1s;
+}
+
+.search__inner-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 
 .search__input {
-  border: 2px solid #ff3e79;
+  border: 1px solid #ff3e79;
+  outline: none;
   border-radius: 8px;
-  left: -150px;
-  position: absolute;
-  width: 17px;
+  position: relative;
+  right: -20px;
+  opacity: 0;
+  transition: opacity 0.5s linear 0.15s;
+  width: 87.2%;
   height: 35px;
   top: 3px;
-  outline: none;
-  opacity: 0;
-  transition: all 1s linear 1s;
 }
 
 .search__input--active {
@@ -2167,7 +2161,8 @@ li {
   display: none;
   flex-direction: column;
   z-index: 999;
-  top: 0;
+  top: 35%;
+  transform: translateY(-50%);
   right: 0;
   width: 320px;
   height: 678px;
@@ -2254,6 +2249,23 @@ li {
   font-size: 14px;
   line-height: 16px;
   color: #7e7e82;
+}
+
+.overlay-cat.active {
+  display: block;
+}
+
+.overlay-cat {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  mix-blend-mode: normal;
+  opacity: 0.86;
+  display: none;
+  z-index: 997;
 }
 
 @media (min-width: 360px) {
@@ -2447,6 +2459,12 @@ li {
   .modal-feedback__textarea {
     width: 376px;
     height: 118px;
+  }
+}
+
+@media (max-width: 1439px) {
+  .main-menu__header.main-menu__search-active > .main-menu__logo {
+    opacity: 0;
   }
 }
 

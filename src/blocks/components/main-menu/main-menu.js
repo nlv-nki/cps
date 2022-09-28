@@ -1,5 +1,5 @@
-import { modal_feedback } from '../modal-feedback/modal-feedback';
 import { overlay } from '../overlay-cat/overlay-cat';
+import { modalW_control } from '../modalW/modalW';
 
 let menu = document.querySelector('.main-menu');
 let menu__header = document.querySelector('.main-menu__header');
@@ -25,8 +25,15 @@ main_menu_userlist.addEventListener('click', (e) => {
 	let target = e.target.closest('BUTTON');
 
 	if (target.classList.contains('main-menu__btn-modal')) {
-		modal_feedback.classList.add('modal-feedback__js-is-active');
-		overlay.classList.add('active');
+		modalW_control('.modal-feedback');
+	}
+
+	if (target.classList.contains('main-menu__btn-call')) {
+		modalW_control('.modal-call');
+	}
+
+	if (target.classList.contains('main-menu__btn-profile')) {
+		modalW_control('.modal-profile');
 	}
 });
 

@@ -1,6 +1,8 @@
 .modalW {
 	position: absolute;
-	display: none;
+	//display: none;
+	visibility: hidden;
+	opacity: 0;
 	flex-direction: column;
 	z-index: 999;
 	// top: 40%;
@@ -13,9 +15,12 @@
 	background: #ffffff;
 	padding: 0 16px;
 	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+	transition: all 0.4s ease-in-out;
 
 	&__js-is-active {
 		display: flex;
+		opacity: 1;
+		visibility: visible;
 	}
 
 	@media (min-width: 1440) {
@@ -42,9 +47,13 @@
 		left: -12px;
 		top: 0;
 		width: 4px;
-		height: 40px;
+		//height: 40px;
 		background-image: url('../img/svg/highlight.svg');
-		background-size: 4px 40px;
+		//background-size: 4px 40px;
+		background-repeat: no-repeat;
+		background-size: cover;
+		min-height: 40px;
+		height: 100%;
 	}
 
 	&__btn-submit {

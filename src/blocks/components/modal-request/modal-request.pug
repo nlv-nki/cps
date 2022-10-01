@@ -1,0 +1,11 @@
+.modalW.modal-request
+	button.btn__modal.modal-request__btn-close.modalW__btn-close
+		svg.modalW__icon-close
+			use(xlink:href="img/sprites/sprite.svg#close")
+	h2.modalW__title Оставить заявку
+	form.modalW__form
+		input(type="text", placeholder="Телефон").modalW__input
+		textarea(placeholder="Сообщение").modalW__textarea
+	p.modalW__text
+		|Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности
+	button.btn.btn__submit.modalW__btn-submit  ОТПРАВИТЬ

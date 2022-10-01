@@ -10,6 +10,8 @@
     <link rel="shortcut icon" href="img/favicons/favicon.ico" type="image/x-icon">
     <link rel="icon" sizes="16x16" href="img/favicons/favicon-16x16.png" type="image/png">
     <link rel="icon" sizes="32x32" href="img/favicons/favicon-32x32.png" type="image/png">
+    <link rel="icon" sizes="32x32" href="img/favicons/favicon-48x48.png" type="image/png">
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-touch-icon.png">
     <link rel="stylesheet" href="styles/main.css">
   </head>
   <body>
@@ -56,7 +58,7 @@
               <use xlink:href="img/sprites/sprite.svg#call"></use>
             </svg>
           </button>
-          <button class="btn__modal main-menu__btn main-menu__btn-modal">
+          <button class="btn__modal main-menu__btn main-menu__btn-feedback">
             <svg>
               <use xlink:href="img/sprites/sprite.svg#chat"></use>
             </svg>
@@ -91,7 +93,7 @@
             <use xlink:href="img/sprites/sprite.svg#call"></use>
           </svg>
         </button>
-        <button class="btn__modal header-menu__btn header-menu__btn-modal">
+        <button class="btn__modal header-menu__btn header-menu__btn-feedback">
           <svg>
             <use xlink:href="img/sprites/sprite.svg#chat"></use>
           </svg>
@@ -166,18 +168,66 @@
         <h2 class="brands__title">Ремонт техники различных брендов</h2>
         <div class="swiper brands__swiper items-box">
           <div class="swiper-wrapper brands__wrapper items-box__wrapper">
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
-            <div class="swiper-slide brands__item"><img src="../img/content/lenovo_logo.png"></div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/lenovo_logo.webp"><img src="../img/content/lenovo_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/apple_logo.webp"><img src="../img/content/apple_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/bosh_logo.webp"><img src="../img/content/bosh_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/hp_logo.webp"><img src="../img/content/hp_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/samsung_logo.webp"><img src="../img/content/samsung_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/sony_logo.webp"><img src="../img/content/sony_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/viewsonic_logo.webp"><img src="../img/content/viewsonic_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/acer_logo.webp"><img src="../img/content/acer_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/asus_logo.webp"><img src="../img/content/asus_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/hiaomi_logo.webp"><img src="../img/content/hiaomi_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/ibm_logo.webp"><img src="../img/content/ibm_logo.png">
+              </picture>
+            </div>
+            <div class="swiper-slide brands__item">
+              <picture>
+                <source type="image/webp" srcset="../img/content/dell_logo.webp"><img src="../img/content/dell_logo.png">
+              </picture>
+            </div>
           </div>
           <div class="swiper-pagination"></div>
         </div><a class="link-more brands__js-btn-shower">Показать все</a>
@@ -321,20 +371,20 @@
     </footer>
     <div class="modals">
       <div class="modalW modal-feedback">
-        <button class="btn__modal modalW__btn-close modal-feedback__btn-close">
-          <svg class="modal-feedback__icon-close">
+        <button class="btn__modal modal-feedback__btn-close modalW__btn-close">
+          <svg class="modalW__icon-close">
             <use xlink:href="img/sprites/sprite.svg#close"></use>
           </svg>
         </button>
-        <h2 class="modal-feedback__title">Обратная связь</h2>
-        <form class="modal-feedback__form">
-          <input class="modal-feedback__input" type="text" placeholder="Имя">
-          <input class="modal-feedback__input" type="text" placeholder="Телефон">
-          <input class="modal-feedback__input" type="text" placeholder="Электронная почта">
-          <textarea class="modal-feedback__textarea" placeholder="Сообщение"></textarea>
+        <h2 class="modalW__title">Обратная связь</h2>
+        <form class="modalW__form">
+          <input class="modalW__input" type="text" placeholder="Имя">
+          <input class="modalW__input" type="text" placeholder="Телефон">
+          <input class="modalW__input" type="text" placeholder="Электронная почта">
+          <textarea class="modalW__textarea" placeholder="Сообщение"></textarea>
         </form>
-        <p class="modal-feedback__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
-        <button class="btn btn__submit modal-feedback__btn-submit"> ОТПРАВИТЬ</button>
+        <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>
       </div>
       <div class="modalW modal-call">
         <button class="btn__modal modal-call__btn-close modalW__btn-close">
@@ -358,7 +408,35 @@
         <h2 class="modalW__title">Войти в кабинет заказов</h2>
         <form class="modalW__form">
           <input class="modalW__input" type="text" placeholder="Телефон">
-          <input class="modalW__input" type="text" placeholder="Номер заказы">
+          <input class="modalW__input" type="text" placeholder="Номер заказа">
+        </form>
+        <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>
+      </div>
+      <div class="modalW modal-request">
+        <button class="btn__modal modal-request__btn-close modalW__btn-close">
+          <svg class="modalW__icon-close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modalW__title">Оставить заявку</h2>
+        <form class="modalW__form">
+          <input class="modalW__input" type="text" placeholder="Телефон">
+          <textarea class="modalW__textarea" placeholder="Сообщение"></textarea>
+        </form>
+        <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
+        <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>
+      </div>
+      <div class="modalW modal-status">
+        <button class="btn__modal modal-status__btn-close modalW__btn-close">
+          <svg class="modalW__icon-close">
+            <use xlink:href="img/sprites/sprite.svg#close"></use>
+          </svg>
+        </button>
+        <h2 class="modalW__title">Проверить статус ремонта</h2>
+        <form class="modalW__form">
+          <input class="modalW__input" type="text" placeholder="Телефон">
+          <input class="modalW__input" type="text" placeholder="Номер заказа">
         </form>
         <p class="modalW__text">Нажимая “отправить”, вы даете согласие на обработку персональных данных и соглашаетесь с нашей политикой конфиденциальности</p>
         <button class="btn btn__submit modalW__btn-submit"> ОТПРАВИТЬ</button>

@@ -24,7 +24,7 @@ menu_search_btn.addEventListener('click', function (e) {
 main_menu_userlist.addEventListener('click', (e) => {
 	let target = e.target.closest('BUTTON');
 
-	if (target.classList.contains('main-menu__btn-modal')) {
+	if (target.classList.contains('main-menu__btn-feedback')) {
 		modalW_control('.modal-feedback');
 	}
 

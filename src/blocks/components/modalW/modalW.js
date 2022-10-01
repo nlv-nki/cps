@@ -22,9 +22,9 @@ const open_modalW = function (modal) {
 	}
 };
 
-const modalW_control = function (window) {
+const modalW_control = function (modal_name) {
 	if (!is_open) {
-		modal = document.querySelector(window);
+		modal = document.querySelector(modal_name);
 		modalW_close_btn = modal.querySelector('.modalW__btn-close');
 	}
 

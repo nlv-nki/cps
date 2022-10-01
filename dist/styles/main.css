@@ -2106,6 +2106,10 @@ li {
   flex-direction: column;
 }
 
+.content picture {
+  width: 100%;
+}
+
 .content__images {
   width: 100%;
 }

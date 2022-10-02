@@ -2502,6 +2502,16 @@ li {
   }
 }
 
+@media (max-width: 1110px) {
+  .services__js-btn-shower {
+    display: none;
+  }
+
+  .content__description-wrapper p:not(:first-child) {
+    display: none;
+  }
+}
+
 @media (max-width: 767px) {
   .content__images {
     order: 1;

@@ -47,9 +47,8 @@
 			display: block;
 		}
 	}
-
 	&__js-btn-shower {
-		@media (max-width: 1110px) {
+		@media (min-width: 1120px) {
 			display: none;
 		}
 	}

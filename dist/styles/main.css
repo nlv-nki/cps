@@ -2173,6 +2173,10 @@ li {
   left: 1px;
 }
 
+.search__error {
+  border: 1px solid red;
+}
+
 .overlay-cat.active {
   display: block;
 }

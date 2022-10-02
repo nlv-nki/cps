@@ -1,24 +1,41 @@
 import { overlay } from '../overlay-cat/overlay-cat';
 import { modalW_control } from '../modalW/modalW';
+import { search__control } from '../search/search';
 
 let menu = document.querySelector('.main-menu');
 let menu__header = document.querySelector('.main-menu__header');
 let menu_close_btn = document.querySelector('.main-menu__btn-close');
 let main_menu_userlist = document.querySelector('.main-menu__user-list');
-let menu_search_btn = document.querySelector('.main-menu__btn-search');
 
 const close_menu = () => {
 	if (menu.classList.contains('main-menu__js-is-active')) menu.classList.remove('main-menu__js-is-active');
 	overlay.classList.remove('active');
 };
 
-menu_close_btn.addEventListener('click', close_menu);
-document.addEventListener('overlay_click', close_menu);
-
-menu_search_btn.addEventListener('click', function (e) {
+const main_menu_search_active = () => {
 	if (!menu__header.classList.contains('main-menu__search-active')) {
 		menu__header.classList.add('main-menu__search-active');
-	} else menu__header.classList.remove('main-menu__search-active');
+		return;
+	}
+	if (menu__header.classList.contains('main-menu__search-active')) {
+		search__control(true);
+	}
+};
+
+const main_menu_search_deactive = () => {
+	menu__header.classList.remove('main-menu__search-active');
+};
+
+menu_close_btn.addEventListener('click', close_menu);
+document.addEventListener('overlay_click', close_menu);
+menu.addEventListener('search_click', main_menu_search_active);
+menu.addEventListener('click', (ev) => {
+	if (menu__header.classList.contains('main-menu__search-active')) {
+		if (!ev.target.closest('.search')) {
+			main_menu_search_deactive();
+			search__control(false);
+		}
+	}
 });
 
 main_menu_userlist.addEventListener('click', (e) => {
@@ -37,4 +54,4 @@ main_menu_userlist.addEventListener('click', (e) => {
 	}
 });
 
-export { menu };
+export { menu, menu__header, main_menu_search_deactive };

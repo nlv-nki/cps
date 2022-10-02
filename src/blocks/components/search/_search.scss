@@ -30,4 +30,8 @@
 	&__input--active {
 		left: 1px;
 	}
+
+	&__error {
+		border: 1px solid red;
+	}
 }

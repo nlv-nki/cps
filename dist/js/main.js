@@ -47,13 +47,13 @@ header_menu_userlist.addEventListener('click', function (e) {
   }
 });
 header_menu_services.addEventListener('click', function (e) {
-  var target = e.target.closest('BUTTON');
+  var target = e.target.closest('A');
 
-  if (target.classList.contains('header-menu__btn-request')) {
+  if (target.hash.includes('request')) {
     (0,_modalW_modalW__WEBPACK_IMPORTED_MODULE_0__.modalW_control)('.modal-request');
   }
 
-  if (target.classList.contains('header-menu__btn-checkstatus')) {
+  if (target.hash.includes('checkstatus')) {
     (0,_modalW_modalW__WEBPACK_IMPORTED_MODULE_0__.modalW_control)('.modal-status');
   }
 });

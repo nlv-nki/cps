@@ -1,6 +1,6 @@
 import { overlay } from '../overlay-cat/overlay-cat';
 import { modalW_control } from '../modalW/modalW';
-import { search__control } from '../search/search';
+import { search__control_input, search__data_finder } from '../search/search';
 
 let menu = document.querySelector('.main-menu');
 let menu__header = document.querySelector('.main-menu__header');
@@ -18,7 +18,10 @@ const main_menu_search_active = () => {
 		return;
 	}
 	if (menu__header.classList.contains('main-menu__search-active')) {
-		search__control(true);
+		let is_field_data_valid = search__control_input(true);
+		if (is_field_data_valid) {
+			search__data_finder('.main-menu__list');
+		}
 	}
 };
 
@@ -33,7 +36,7 @@ menu.addEventListener('click', (ev) => {
 	if (menu__header.classList.contains('main-menu__search-active')) {
 		if (!ev.target.closest('.search')) {
 			main_menu_search_deactive();
-			search__control(false);
+			search__control_input(false);
 		}
 	}
 });

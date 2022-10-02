@@ -15,6 +15,7 @@
 			order: 1;
 		}
 	}
+
 	&__description {
 		@media (max-width: 767px) {
 			order: 2;
@@ -24,6 +25,12 @@
 	&__description-wrapper {
 		padding-bottom: 5px;
 		margin-bottom: 20px;
+	}
+
+	&__description-wrapper p:not(:first-child) {
+		@media (max-width: 1110px) {
+			display: none;
+		}
 	}
 
 	&__description-wrapper::after {

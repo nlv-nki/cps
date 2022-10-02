@@ -47,4 +47,10 @@
 			display: block;
 		}
 	}
+
+	&__js-btn-shower {
+		@media (max-width: 1110px) {
+			display: none;
+		}
+	}
 }

@@ -144,29 +144,51 @@ function enableSwiper(container) {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "menu": function() { return /* binding */ menu; }
+/* harmony export */   "main_menu_search_deactive": function() { return /* binding */ main_menu_search_deactive; },
+/* harmony export */   "menu": function() { return /* binding */ menu; },
+/* harmony export */   "menu__header": function() { return /* binding */ menu__header; }
 /* harmony export */ });
 /* harmony import */ var _overlay_cat_overlay_cat__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../overlay-cat/overlay-cat */ "./src/blocks/components/overlay-cat/overlay-cat.js");
 /* harmony import */ var _modalW_modalW__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../modalW/modalW */ "./src/blocks/components/modalW/modalW.js");
+/* harmony import */ var _search_search__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../search/search */ "./src/blocks/components/search/search.js");
+
 
 
 var menu = document.querySelector('.main-menu');
 var menu__header = document.querySelector('.main-menu__header');
 var menu_close_btn = document.querySelector('.main-menu__btn-close');
 var main_menu_userlist = document.querySelector('.main-menu__user-list');
-var menu_search_btn = document.querySelector('.main-menu__btn-search');
 
 var close_menu = function close_menu() {
   if (menu.classList.contains('main-menu__js-is-active')) menu.classList.remove('main-menu__js-is-active');
   _overlay_cat_overlay_cat__WEBPACK_IMPORTED_MODULE_0__.overlay.classList.remove('active');
 };
 
-menu_close_btn.addEventListener('click', close_menu);
-document.addEventListener('overlay_click', close_menu);
-menu_search_btn.addEventListener('click', function (e) {
+var main_menu_search_active = function main_menu_search_active() {
   if (!menu__header.classList.contains('main-menu__search-active')) {
     menu__header.classList.add('main-menu__search-active');
-  } else menu__header.classList.remove('main-menu__search-active');
+    return;
+  }
+
+  if (menu__header.classList.contains('main-menu__search-active')) {
+    (0,_search_search__WEBPACK_IMPORTED_MODULE_2__.search__control)(true);
+  }
+};
+
+var main_menu_search_deactive = function main_menu_search_deactive() {
+  menu__header.classList.remove('main-menu__search-active');
+};
+
+menu_close_btn.addEventListener('click', close_menu);
+document.addEventListener('overlay_click', close_menu);
+menu.addEventListener('search_click', main_menu_search_active);
+menu.addEventListener('click', function (ev) {
+  if (menu__header.classList.contains('main-menu__search-active')) {
+    if (!ev.target.closest('.search')) {
+      main_menu_search_deactive();
+      (0,_search_search__WEBPACK_IMPORTED_MODULE_2__.search__control)(false);
+    }
+  }
 });
 main_menu_userlist.addEventListener('click', function (e) {
   var target = e.target.closest('BUTTON');
@@ -280,6 +302,48 @@ var close_modal_overlay = function close_modal_overlay(modal) {
 
 /***/ }),
 
+/***/ "./src/blocks/components/search/search.js":
+/*!************************************************!*\
+  !*** ./src/blocks/components/search/search.js ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "search__control": function() { return /* binding */ search__control; }
+/* harmony export */ });
+/* harmony import */ var _main_menu_main_menu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../main-menu/main-menu */ "./src/blocks/components/main-menu/main-menu.js");
+
+var search = document.querySelector('.search__input');
+var search__btn = document.querySelector('.search__btn');
+var search_activate = new Event('search_click', {
+  bubbles: true,
+  cancelable: true,
+  composed: false
+});
+
+var search__control = function search__control(toggle) {
+  if (toggle === false && search.classList.contains('search__error')) {
+    search.classList.remove('search__error');
+    (0,_main_menu_main_menu__WEBPACK_IMPORTED_MODULE_0__.main_menu_search_deactive)();
+  }
+
+  if (toggle === true) if (!search.classList.contains('search__error') && search.value.length < 1) {
+    search.classList.add('search__error');
+  }
+};
+
+search__btn.addEventListener('click', function (e) {
+  search.dispatchEvent(search_activate);
+});
+search.addEventListener('focusout', function (ev) {
+  search.dispatchEvent(search_activate);
+  search__control(false);
+});
+
+
+/***/ }),
+
 /***/ "./src/blocks/modules/brands/brands.js":
 /*!*********************************************!*\
   !*** ./src/blocks/modules/brands/brands.js ***!
@@ -388,6 +452,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_header_menu_header_menu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! %components%/header-menu/header-menu */ "./src/blocks/components/header-menu/header-menu.js");
 /* harmony import */ var _components_overlay_cat_overlay_cat__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! %components%/overlay-cat/overlay-cat */ "./src/blocks/components/overlay-cat/overlay-cat.js");
 /* harmony import */ var _components_modalW_modalW__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! %components%/modalW/modalW */ "./src/blocks/components/modalW/modalW.js");
+/* harmony import */ var _components_search_search__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! %components%/search/search */ "./src/blocks/components/search/search.js");
+
 
 
 

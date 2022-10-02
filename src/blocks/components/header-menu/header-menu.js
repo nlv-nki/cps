@@ -18,11 +18,11 @@ header_menu_userlist.addEventListener('click', (e) => {
 });
 
 header_menu_services.addEventListener('click', (e) => {
-	let target = e.target.closest('BUTTON');
-	if (target.classList.contains('header-menu__btn-request')) {
+	let target = e.target.closest('A');
+	if (target.hash.includes('request')) {
 		modalW_control('.modal-request');
 	}
-	if (target.classList.contains('header-menu__btn-checkstatus')) {
+	if (target.hash.includes('checkstatus')) {
 		modalW_control('.modal-status');
 	}
 });

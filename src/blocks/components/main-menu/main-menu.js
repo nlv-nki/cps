@@ -28,7 +28,7 @@ const main_menu_search_deactive = () => {
 
 menu_close_btn.addEventListener('click', close_menu);
 document.addEventListener('overlay_click', close_menu);
-menu.addEventListener('search_click', main_menu_search_active);
+menu.addEventListener('search_btn_click', main_menu_search_active);
 menu.addEventListener('click', (ev) => {
 	if (menu__header.classList.contains('main-menu__search-active')) {
 		if (!ev.target.closest('.search')) {

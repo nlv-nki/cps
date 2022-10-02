@@ -1,7 +1,7 @@
 import { main_menu_search_deactive } from '../main-menu/main-menu';
 let search = document.querySelector('.search__input');
 let search__btn = document.querySelector('.search__btn');
-const search_activate = new Event('search_click', {
+const search_activate = new Event('search_btn_click', {
 	bubbles: true,
 	cancelable: true,
 	composed: false,
@@ -10,7 +10,6 @@ const search_activate = new Event('search_click', {
 const search__control = (toggle) => {
 	if (toggle === false && search.classList.contains('search__error')) {
 		search.classList.remove('search__error');
-		main_menu_search_deactive();
 	}
 
 	if (toggle === true)

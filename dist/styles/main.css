@@ -1529,7 +1529,7 @@ li {
   padding: 16px 88px 120px 16px;
   display: flex;
   box-sizing: border-box;
-  margin-right: auto;
+  margin-right: 10px;
 }
 
 .repair__item::after {
@@ -1557,7 +1557,7 @@ li {
 }
 
 .price {
-  padding: 30px;
+  padding: 0 40px 0 30px;
 }
 
 .price__title {
@@ -1810,7 +1810,9 @@ li {
 }
 
 .main-menu {
-  display: none;
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
   position: fixed;
   height: 100vh;
   flex-direction: column;
@@ -1819,9 +1821,13 @@ li {
   z-index: 995;
   background: #ffffff;
   min-width: 320px;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
 }
 
 .main-menu__js-is-active {
+  opacity: 1;
+  visibility: visible;
+  transition-delay: 0s;
   display: flex;
   z-index: 999;
 }
@@ -2196,13 +2202,14 @@ li {
   background: #ffffff;
   padding: 0 16px;
   box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-  transition: all 0.4s ease-in-out;
+  transition: opacity 0.3s, visibility 0s linear 0.3s;
 }
 
 .modalW__js-is-active {
   display: flex;
   opacity: 1;
   visibility: visible;
+  transition-delay: 0s;
 }
 
 .modalW__title {
@@ -2290,7 +2297,7 @@ li {
 
 @media (min-width: 768px) {
   .brands__item {
-    width: 224px;
+    width: 222px;
   }
 
   .repair__wrapper {
@@ -2367,7 +2374,7 @@ li {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: start;
+    justify-content: space-between;
     max-height: 190px;
     margin-bottom: 30px;
     overflow: hidden;
@@ -2392,6 +2399,12 @@ li {
   .content__description-wrapper {
     padding: 0 12px;
     position: relative;
+  }
+}
+
+@media (min-width: 968px) {
+  .repair__js-btn-shower {
+    display: none;
   }
 }
 
@@ -2446,7 +2459,8 @@ li {
   }
 
   .main-menu {
-    display: flex;
+    visibility: visible;
+    opacity: 1;
     box-shadow: none;
   }
 

@@ -7,7 +7,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			align-items: center;
-			justify-content: start;
+			justify-content: space-between;
 			max-height: 190px;
 			margin-bottom: 30px;
 			overflow: hidden;
@@ -18,7 +18,6 @@
 	&__wrapper--show_on_mobile {
 		overflow: hidden;
 		max-height: 190px;
-		//margin-bottom: 15px;
 	}
 
 	&__wrapper--expanded {

@@ -15,12 +15,13 @@
 	background: #ffffff;
 	padding: 0 16px;
 	box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
-	transition: all 0.4s ease-in-out;
+	transition: opacity 0.3s, visibility 0s linear 0.3s;
 
 	&__js-is-active {
 		display: flex;
 		opacity: 1;
 		visibility: visible;
+		transition-delay: 0s;
 	}
 
 	@media (min-width: 1440) {

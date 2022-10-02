@@ -1913,6 +1913,16 @@ li {
   opacity: 1;
 }
 
+.main-menu__header.main-menu__search-active .main-menu__btn-search svg {
+  opacity: 1;
+  transform: rotate(-10deg);
+}
+
+.main-menu__header.main-menu__search-active .main-menu__btn-search:hover svg {
+  width: 39px;
+  height: 41px;
+}
+
 .main-menu__user-list {
   display: flex;
   padding-bottom: 16px;

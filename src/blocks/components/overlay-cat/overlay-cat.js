@@ -1,4 +1,4 @@
-import { close_modalW } from '../modalW/modalW';
+import { close_modalW, modalW_control } from '../modalW/modalW';
 let overlay = document.querySelector('.overlay-cat');
 let modal = undefined;
 
@@ -14,7 +14,7 @@ overlay.addEventListener('click', (e) => {
 
 document.addEventListener('overlay_click', function () {
 	modal = document.querySelector('.modalW__js-is-active');
-	close_modal_overlay(modal);
+	if (modal) close_modal_overlay(modal);
 });
 
 const close_modal_overlay = function (modal) {

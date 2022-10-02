@@ -45,12 +45,9 @@
 
 	&__header {
 		display: flex;
+		position: relative;
 		align-items: center;
 		padding: 18px 23px 45px;
-	}
-
-	&__body {
-		margin-bottom: 245px;
 	}
 
 	&__list {
@@ -153,7 +150,7 @@
 		font-size: 24px;
 		line-height: 32px;
 		letter-spacing: -0.6px;
-		padding-bottom: 40px;
+		padding-bottom: 20px;
 	}
 
 	&__lan {
@@ -165,6 +162,7 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin: auto 0;
 
 		.main-menu__link {
 			margin-right: 7px;

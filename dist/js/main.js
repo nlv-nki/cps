@@ -268,7 +268,7 @@ overlay.addEventListener('click', function (e) {
 });
 document.addEventListener('overlay_click', function () {
   modal = document.querySelector('.modalW__js-is-active');
-  close_modal_overlay(modal);
+  if (modal) close_modal_overlay(modal);
 });
 
 var close_modal_overlay = function close_modal_overlay(modal) {

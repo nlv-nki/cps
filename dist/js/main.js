@@ -181,7 +181,7 @@ var main_menu_search_deactive = function main_menu_search_deactive() {
 
 menu_close_btn.addEventListener('click', close_menu);
 document.addEventListener('overlay_click', close_menu);
-menu.addEventListener('search_click', main_menu_search_active);
+menu.addEventListener('search_btn_click', main_menu_search_active);
 menu.addEventListener('click', function (ev) {
   if (menu__header.classList.contains('main-menu__search-active')) {
     if (!ev.target.closest('.search')) {
@@ -316,7 +316,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var search = document.querySelector('.search__input');
 var search__btn = document.querySelector('.search__btn');
-var search_activate = new Event('search_click', {
+var search_activate = new Event('search_btn_click', {
   bubbles: true,
   cancelable: true,
   composed: false
@@ -325,7 +325,6 @@ var search_activate = new Event('search_click', {
 var search__control = function search__control(toggle) {
   if (toggle === false && search.classList.contains('search__error')) {
     search.classList.remove('search__error');
-    (0,_main_menu_main_menu__WEBPACK_IMPORTED_MODULE_0__.main_menu_search_deactive)();
   }
 
   if (toggle === true) if (!search.classList.contains('search__error') && search.value.length < 1) {

@@ -125,6 +125,16 @@
 		opacity: 1;
 	}
 
+	&__header.main-menu__search-active .main-menu__btn-search svg {
+		opacity: 1;
+		transform: rotate(-10deg);
+	}
+
+	&__header.main-menu__search-active .main-menu__btn-search:hover svg {
+		width: 39px;
+		height: 41px;
+	}
+
 	&__user-list {
 		display: flex;
 		padding-bottom: 16px;

@@ -8,6 +8,9 @@
 
 	&__images {
 		width: 100%;
+		@media (min-width: 768px) {
+			padding-right: 40px;
+		}
 		@media (max-width: 767px) {
 			order: 1;
 		}
@@ -31,10 +34,12 @@
 		height: 65px;
 		bottom: 0;
 		background: linear-gradient(70deg, rgba(248, 248, 248, 0.5) 10%, rgba(248, 248, 248, 0.9) 90%);
+		transition: all 0.2s ease-in;
 	}
 
 	&__description-wrapper.items-box__wrapper--expanded:after {
 		background: transparent;
+		transition-delay: 0s;
 	}
 
 	@media (min-width: 768px) {

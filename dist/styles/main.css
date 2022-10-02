@@ -1557,7 +1557,7 @@ li {
 }
 
 .price {
-  padding: 0 40px 0 30px;
+  padding: 0 40px 0 31px;
 }
 
 .price__title {
@@ -2131,10 +2131,12 @@ li {
   height: 65px;
   bottom: 0;
   background: linear-gradient(70deg, rgba(248, 248, 248, 0.5) 10%, rgba(248, 248, 248, 0.9) 90%);
+  transition: all 0.2s ease-in;
 }
 
 .content__description-wrapper.items-box__wrapper--expanded:after {
   background: transparent;
+  transition-delay: 0s;
 }
 
 .search {
@@ -2384,6 +2386,10 @@ li {
   .items-box__wrapper--expanded {
     max-height: 1200px;
     transition: max-height 0.45s ease-in;
+  }
+
+  .content__images {
+    padding-right: 40px;
   }
 
   .content {

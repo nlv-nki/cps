@@ -1844,12 +1844,9 @@ li {
 
 .main-menu__header {
   display: flex;
+  position: relative;
   align-items: center;
   padding: 18px 23px 45px;
-}
-
-.main-menu__body {
-  margin-bottom: 245px;
 }
 
 .main-menu__list {
@@ -1956,6 +1953,7 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  margin: auto 0;
 }
 
 .main-menu__footer .main-menu__link {
@@ -1977,7 +1975,7 @@ li {
   display: block;
   position: absolute;
   top: 12px;
-  right: 0;
+  right: -20px;
   width: 2px;
   height: 32px;
   background-color: #eaeaea;
